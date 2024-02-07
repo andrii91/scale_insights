@@ -1,9 +1,51 @@
-// функція для пропорційного зменшення - use -> vw(30px)
+// $vw-viewport: 1920;
 
-$vw-viewport: 1920;
+// @function vw($font) {
+//   $vw-context: calc($vw-viewport * 0.01 * 1px);
+//   @return calc($font / $vw-context * 1vw);
+//   @return $font;
+// } 
+ 
 
-@function vw($font) {
-  $vw-context: calc($vw-viewport * 0.01 * 1px);
-  @return calc($font / $vw-context * 1vw);
-  @return $font;
-} 
+$light-color: #F4F5F9 !default;
+$dark-color-html: linear-gradient(0deg, rgba(41, 42, 49, 0.40) 0%, rgba(41, 42, 49, 0.40) 100%), linear-gradient(90deg, rgba(173, 0, 255, 0.10) 0%, rgba(11, 55, 201, 0.10) 50.47%, rgba(0, 216, 255, 0.10) 100%), #242734 !default;
+$logo-color-dark: #142F53 !default;
+$text-color-dark: #143054 !default;
+$text-color-light: #fff !default;
+$text-black: #252B3D !default;
+$nav-bg-light: rgba(244, 245, 249, 0.80)!default;
+$nav-bg-dark: rgba(0, 0, 0, 0.80)!default;
+
+html {
+  --htmlBg: #{$light-color};
+  --textColor: #{$text-color-dark};
+  --logoColor: #{$logo-color-dark};
+  --colorWhite: #{$text-color-light};
+  --navBg: #{$nav-bg-light};
+
+  &[data-theme=dark] {
+    --htmlBg: #{$dark-color-html};
+    --textColor: #{$text-color-light};
+    --logoColor: #{$text-color-light};
+    --colorWhite: #{$text-black};
+    --navBg: #{$nav-bg-dark};
+  } 
+
+  // &[data-theme=light] {
+  //   --htmlBg: #{$light-color};
+  //   --textColor: #{$text-color-dark};
+  //   --logoColor: #{$logo-color-dark};
+  //   --colorWhite: #{$text-color-light};
+  //   --navBg: #{$nav-bg-light};
+  // }
+}
+
+// @media (prefers-color-scheme: dark) {
+//   html {
+//     --htmlBg: #{$dark-color-html};
+//     --textColor: #{$text-color-light};
+//     --logoColor: #{$text-color-light};
+//     --colorWhite: #{$text-black};
+//     --navBg: #{$nav-bg-dark};
+//   }
+// }

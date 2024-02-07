@@ -18,8 +18,9 @@ var webserver = require('gulp-webserver');
 gulp.task('serve', function() {
   gulp.src('dist')
    .pipe(webserver({
-    livereload: true,
-    open: true,
+        livereload: true,
+        open: true,
+        // port: 8001,
       fallback: 'index.html'
     }));
 
@@ -48,6 +49,7 @@ gulp.task('js', async function() {
 gulp.task('js_v', async function() {
     gulp.src([
             'src/js/vendor/jquery-3.6.3.min.js',
+            'src/js/vendor/viewport-checker.js'
         ])
         .pipe(concat('vendor.js'))
         .pipe(uglify())

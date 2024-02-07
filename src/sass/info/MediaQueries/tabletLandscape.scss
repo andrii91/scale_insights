@@ -2,4 +2,46 @@
 
 @media #{$tabletLandscape} {
   @import '../desktop';
+
+  .strategies-graph {
+      max-width: 992px;
+      overflow: hidden;
+      height: 210px;
+      margin-left: auto;
+      margin-right: auto;
+      display: block;
+      position: relative;
+
+      .strategies-graph-item {
+        margin-left: -116px;
+
+        &:first-child {
+          left: inherit;
+          right: 0;
+        }
+      }
+    
+  }
+
+  .strategies-info {
+    max-width: 860px;
+    display: flex;
+    &-item {
+      &:nth-child(3) {
+        margin: 0;
+      }
+      &:nth-child(2) {
+        width: 199px;
+        margin-right: 45px;
+      }
+    }
+  }
+
+  .menu a {
+    font-size: 12px;
+  }
+
+  .superhero-tab {
+    display: flex;
+  }
 }
