@@ -1,3 +1,20 @@
 & {
-
+    .automation {
+        &-slider {
+          .slick-track {
+            display: flex !important;
+            justify-content: space-between !important;
+      
+            &:after, &:before {
+              display: none;
+            }
+          }
+          .slick-slide {
+            width: 210px !important;
+            > div {
+              margin-bottom: vw(70px);
+            }
+          }
+        }
+    }
 }

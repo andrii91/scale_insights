@@ -105,12 +105,43 @@ $( document ).ready(function() {
 
 
   $('.tabs-nav li').click(function(){
-    $('.tabs-nav li').removeClass('active');
+    $(this).parents('.tabs').find('.tabs-nav li').removeClass('active');
     $(this).addClass('active')
 
-    $('.tabs-item').removeClass('active');
-    $(`#${$(this).data('tab')}`).addClass('active');
+    $(this).parents('.tabs').find('.tabs-item').removeClass('active');
+    $(this).parents('.tabs').find(`#${$(this).data('tab')}`).addClass('active');
   })
+
+
+  $('.automation-slider').slick({
+		rows: 3,
+		dots: false,
+		arrows: false,
+		infinite: true,
+		speed: 300,
+		slidesToShow: 4,
+		slidesToScroll: 4,
+    responsive: [
+      {
+        breakpoint: 992,
+        settings: {
+          rows: 2,
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          dots: true,
+        }
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          rows: 2,
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          dots: true,
+        }
+      }
+    ]
+});
 
 }) 
 

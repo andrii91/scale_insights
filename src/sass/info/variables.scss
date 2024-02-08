@@ -1,10 +1,10 @@
-// $vw-viewport: 1920;
+$vw-viewport: 1920;
 
-// @function vw($font) {
-//   $vw-context: calc($vw-viewport * 0.01 * 1px);
-//   @return calc($font / $vw-context * 1vw);
-//   @return $font;
-// } 
+@function vw($font) {
+  $vw-context: calc($vw-viewport * 0.01 * 1px);
+  @return calc($font / $vw-context * 1vw);
+  @return $font;
+} 
  
 
 $light-color: #F4F5F9 !default;
@@ -31,21 +31,21 @@ html {
     --navBg: #{$nav-bg-dark};
   } 
 
-  // &[data-theme=light] {
-  //   --htmlBg: #{$light-color};
-  //   --textColor: #{$text-color-dark};
-  //   --logoColor: #{$logo-color-dark};
-  //   --colorWhite: #{$text-color-light};
-  //   --navBg: #{$nav-bg-light};
-  // }
+  &[data-theme=light] {
+    --htmlBg: #{$light-color};
+    --textColor: #{$text-color-dark};
+    --logoColor: #{$logo-color-dark};
+    --colorWhite: #{$text-color-light};
+    --navBg: #{$nav-bg-light};
+  }
 }
 
-// @media (prefers-color-scheme: dark) {
-//   html {
-//     --htmlBg: #{$dark-color-html};
-//     --textColor: #{$text-color-light};
-//     --logoColor: #{$text-color-light};
-//     --colorWhite: #{$text-black};
-//     --navBg: #{$nav-bg-dark};
-//   }
-// }
+@media (prefers-color-scheme: dark) {
+  html {
+    --htmlBg: #{$dark-color-html};
+    --textColor: #{$text-color-light};
+    --logoColor: #{$text-color-light};
+    --colorWhite: #{$text-black};
+    --navBg: #{$nav-bg-dark};
+  }
+}
