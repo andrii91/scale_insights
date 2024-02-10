@@ -5,47 +5,360 @@ $vw-viewport: 1920;
   @return calc($font / $vw-context * 1vw);
   @return $font;
 } 
- 
 
-$light-color: #F4F5F9 !default;
-$dark-color-html: linear-gradient(0deg, rgba(41, 42, 49, 0.40) 0%, rgba(41, 42, 49, 0.40) 100%), linear-gradient(90deg, rgba(173, 0, 255, 0.10) 0%, rgba(11, 55, 201, 0.10) 50.47%, rgba(0, 216, 255, 0.10) 100%), #242734 !default;
-$logo-color-dark: #142F53 !default;
-$text-color-dark: #143054 !default;
-$text-color-light: #fff !default;
-$text-black: #252B3D !default;
-$nav-bg-light: rgba(244, 245, 249, 0.80)!default;
-$nav-bg-dark: rgba(0, 0, 0, 0.80)!default;
 
 html {
-  --htmlBg: #{$light-color};
-  --textColor: #{$text-color-dark};
-  --logoColor: #{$logo-color-dark};
-  --colorWhite: #{$text-color-light};
-  --navBg: #{$nav-bg-light};
+  body {
+    .theme-light {
+      display: block ;
+    }
+    .theme-dark {
+      display: none ;
+    }
+  }
+
+  --htmlBg: #F4F5F9;
+  --textColor: #143054;
+  --logoColor: #142F53;
+  --colorWhite: #fff;
+  --navBg: rgba(244, 245, 249, 0.80);
+  --gray-500: #ADB5BD;
+  --btn-dark: #143054;
+  --btn-dark-hover: #214C83;
+  --btn-dark-text: #BFFFF7;
+  --btn: #143054;
+  --btn-hover: #395FC2;
+  --checbox-color: #C4C9D4;
+  --checbox-active-color: #5B6283;
+  --strategies-info-item-top: #5B6283;
+  --strategies-info-item-top-border: #A6ADCD;
+  --strategies-info-item-bottom: #143054;
+  --automation-item-number: #395fc2;
+  --automation-border: #878EAA;
+  --tabs-nav-title: #5B6283;
+  --tabs-nav-p: #878EAA;
+  --tabs-nav-active: #143054;
+  --tabs-nav-li-border: #F4F5F9;
+  --tabs-nav-li-border-hover: #8D93AD;
+  --tabs-nav-li-bg: #EAECF5;
+  --automation-slider-item-p: #5b6283;
+  --automation-slider-item-order: #eaecf5;
+  --automation-slider-item-order-arrow: #395FC2;
+  --automation-slider-item-order-cicle: #D5D9EB;
+  --automation-slider-item-order-hover: #395FC2;
+  --campaigns-info: #878EAA;
+  --price-bg: #fff;  
+  --price-subtitle: #395FC2;
+  --price-col-p: #5b6283;
+  --price-item-hover: rgba(255, 255, 255, 0.70);
+  --price-item-bage: #1C2844;
+  --modal-bg: rgba(244, 245, 249, .9);
+  --modal-dialog-bg: #fff;
+  --reviews-slider-item-bg: #fff;
+  --reviews-slider-item-author-info-post: #878EAA;
+  --faq-item: #E8EBF5;
+  --faq-item-title: #787E9A;
+  --footer-bg: #dae1f0;
+  --footer-border-color: #8189A6;
+  --footer-item-h4: #7585A5;
+  --footer-list-li-a: #143054;
+  --footer-copy: #7585A5;
+  --mob-btn-color: #142F53;
+  --nav-bg-mob: #fff;
+  --footer-copy-border: rgba(60, 83, 115, .2);
+
+
+  .price-item-list li:before {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='17' height='17' viewBox='0 0 17 17' fill='none'%3E%3Cpath d='M13.9177 3.39404L15.3333 4.80967L6.33331 13.8097L1.33331 8.80967L2.74894 7.39404L6.33331 10.9815L13.9177 3.39404Z' fill='%23212529'/%3E%3C/svg%3E");
+  }
+
+  .faq-item-title::before {
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='25' viewBox='0 0 24 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg%3E%3Cpath d='M17.909 7.71875L12 13.6278L6.09084 7.71875L4.5 9.30973L12 16.8097L19.5 9.30973L17.909 7.71875Z' fill='%23212529'/%3E%3C/g%3E%3C/svg%3E%0A");
+  }
+  
 
   &[data-theme=dark] {
-    --htmlBg: #{$dark-color-html};
-    --textColor: #{$text-color-light};
-    --logoColor: #{$text-color-light};
-    --colorWhite: #{$text-black};
-    --navBg: #{$nav-bg-dark};
+    --htmlBg: linear-gradient(0deg, rgba(41, 42, 49, 0.40) 0%, rgba(41, 42, 49, 0.40) 100%), linear-gradient(90deg, rgba(173, 0, 255, 0.10) 0%, rgba(11, 55, 201, 0.10) 50.47%, rgba(0, 216, 255, 0.10) 100%), #242734;
+    --textColor: #fff;
+    --logoColor: #fff;
+    --colorWhite: #252B3D;
+    --navBg: rgba(37, 41, 60, 0.80);
+    --btn-dark: #BFFFF7;
+    --btn-dark-hover: #5BE7FE;
+    --btn-dark-text: #222B44;
+    --btn: #FFF; 
+    --btn-hover: #5BE7FE;
+    --checbox-color: #ACBDD7;
+    --checbox-active-color: #BFFFF7;
+    --strategies-info-item-top: #ACBDD7;
+    --strategies-info-item-top-border: #5B6283;
+    --strategies-info-item-bottom: #FFFFFF;
+    --automation-item-number: #5BE7FE;
+    --automation-border: #5B6283;
+    --tabs-nav-title: #ACBDD7;
+    --tabs-nav-p: #686F87;
+    --tabs-nav-active: #fff;
+    --tabs-nav-li-border: #686F87;
+    --tabs-nav-li-border-hover: #4A4E62;
+    --tabs-nav-li-bg: #4A4E62;
+    --automation-slider-item-p: #ACBDD7;
+    --automation-slider-item-order: rgba(255, 255, 255, 0.05);
+    --automation-slider-item-order-arrow: #fff;
+    --automation-slider-item-order-cicle: rgba(103, 111, 139, 0.4);
+    --automation-slider-item-order-hover: #5BE7FE;
+    --campaigns-info: #fff;
+    --price-bg: rgba(123, 200, 224, 0.06);  
+    --price-subtitle: #66D2F9;
+    --price-col-p: #ACBDD7;
+    --price-item-hover: rgba(157, 177, 217, 0.05);
+    --price-item-bage: #fff;
+    --modal-bg: rgba(30, 35, 40, .9);
+    --modal-dialog-bg: #353C46;
+    --reviews-slider-item-bg: rgba(123, 200, 224, 0.07);
+    --reviews-slider-item-author-info-post: #8F99BE;
+    --faq-item: rgba(147, 155, 188, 0.06);
+    --faq-item-title: #ACBDD7;
+    --footer-bg: #2D3A4B;
+    --footer-border-color: #ACBDD7;
+    --footer-item-h4: #fff;
+    --footer-list-li-a: #ACBDD7;
+    --footer-copy: #ACBDD7;
+    --mob-btn-color: #fff;
+    --nav-bg-mob: #24313F; 
+    --footer-copy-border: #4F5A6F;
+
+
+    .price-item-list li:before {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='17' height='17' viewBox='0 0 17 17' fill='none'%3E%3Cpath d='M13.9177 3.39404L15.3333 4.80967L6.33331 13.8097L1.33331 8.80967L2.74894 7.39404L6.33331 10.9815L13.9177 3.39404Z' fill='%23ffffff'/%3E%3C/svg%3E");
+    }
+    .faq-item-title::before {
+      background-image: url("data:image/svg+xml,%3Csvg width='24' height='25' viewBox='0 0 24 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg %3E%3Cpath d='M17.909 7.71875L12 13.6278L6.09084 7.71875L4.5 9.30973L12 16.8097L19.5 9.30973L17.909 7.71875Z' fill='%23ACBDD7'/%3E%3C/g%3E%3C/svg%3E%0A");
+    }
+
+    body {
+      .theme-dark {
+        display: block ;
+      }
+  
+      .theme-light {
+        display: none ;
+      }
+    }
   } 
 
   &[data-theme=light] {
-    --htmlBg: #{$light-color};
-    --textColor: #{$text-color-dark};
-    --logoColor: #{$logo-color-dark};
-    --colorWhite: #{$text-color-light};
-    --navBg: #{$nav-bg-light};
+    --htmlBg: #F4F5F9;
+    --textColor: #143054;
+    --logoColor: #142F53;
+    --colorWhite: #fff;
+    --navBg: rgba(244, 245, 249, 0.80);
+    --gray-500: #ADB5BD;
+    --btn-dark: #143054;
+    --btn-dark-hover: #214C83;
+    --btn-dark-text: #BFFFF7;
+    --btn: #143054;
+    --btn-hover: #395FC2;
+    --checbox-color: #C4C9D4;
+    --checbox-active-color: #5B6283;
+    --strategies-info-item-top: #5B6283;
+    --strategies-info-item-top-border: #A6ADCD;
+    --strategies-info-item-bottom: #143054;
+    --automation-item-number: #395fc2;
+    --automation-border: #878EAA;
+    --tabs-nav-title: #5B6283;
+    --tabs-nav-p: #878EAA;
+    --tabs-nav-active: #143054;
+    --tabs-nav-li-border: #F4F5F9;
+    --tabs-nav-li-border-hover: #8D93AD;
+    --tabs-nav-li-bg: #EAECF5;
+    --automation-slider-item-p: #5b6283;
+    --automation-slider-item-order: #eaecf5;
+    --automation-slider-item-order-arrow: #395FC2;
+    --automation-slider-item-order-cicle: #D5D9EB;
+    --automation-slider-item-order-hover: #395FC2;
+    --campaigns-info: #878EAA;
+    --price-bg: #fff;  
+    --price-subtitle: #395FC2;
+    --price-col-p: #5b6283;
+    --price-item-hover: rgba(255, 255, 255, 0.70);
+    --price-item-bage: #1C2844;
+    --modal-bg: rgba(244, 245, 249, .9);
+    --modal-dialog-bg: #fff;
+    --reviews-slider-item-bg: #fff;
+    --reviews-slider-item-author-info-post: #878EAA;
+    --faq-item: #E8EBF5;
+    --faq-item-title: #787E9A;
+    --footer-bg: #dae1f0;
+    --footer-border-color: #8189A6;
+    --footer-item-h4: #7585A5;
+    --footer-list-li-a: #143054;
+    --footer-copy: #7585A5;
+    --mob-btn-color: #142F53;
+    --nav-bg-mob: #fff;
+    --footer-copy-border: rgba(60, 83, 115, .2);
+
+  
+  
+    .price-item-list li:before {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='17' height='17' viewBox='0 0 17 17' fill='none'%3E%3Cpath d='M13.9177 3.39404L15.3333 4.80967L6.33331 13.8097L1.33331 8.80967L2.74894 7.39404L6.33331 10.9815L13.9177 3.39404Z' fill='%23212529'/%3E%3C/svg%3E");
+    }
+  
+    .faq-item-title::before {
+      background-image: url("data:image/svg+xml,%3Csvg width='24' height='25' viewBox='0 0 24 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg%3E%3Cpath d='M17.909 7.71875L12 13.6278L6.09084 7.71875L4.5 9.30973L12 16.8097L19.5 9.30973L17.909 7.71875Z' fill='%23212529'/%3E%3C/g%3E%3C/svg%3E%0A");
+    }
+
+    body {
+      .theme-light {
+        display: block ;
+      }
+      .theme-dark {
+        display: none ;
+      }
+    }
   }
 }
 
 @media (prefers-color-scheme: dark) {
   html {
-    --htmlBg: #{$dark-color-html};
-    --textColor: #{$text-color-light};
-    --logoColor: #{$text-color-light};
-    --colorWhite: #{$text-black};
-    --navBg: #{$nav-bg-dark};
+    --htmlBg: linear-gradient(0deg, rgba(41, 42, 49, 0.40) 0%, rgba(41, 42, 49, 0.40) 100%), linear-gradient(90deg, rgba(173, 0, 255, 0.10) 0%, rgba(11, 55, 201, 0.10) 50.47%, rgba(0, 216, 255, 0.10) 100%), #242734;
+    --textColor: #fff;
+    --logoColor: #fff;
+    --colorWhite: #252B3D;
+    --navBg: rgba(37, 41, 60, 0.80);
+    --btn-dark: #BFFFF7;
+    --btn-dark-hover: #5BE7FE;
+    --btn-dark-text: #222B44;
+    --btn: #FFF;
+    --btn-hover: #5BE7FE;
+    --checbox-color: #ACBDD7;
+    --checbox-active-color: #BFFFF7;
+    --strategies-info-item-top: #ACBDD7;
+    --strategies-info-item-top-border: #5B6283;
+    --strategies-info-item-bottom: #FFFFFF;
+    --automation-item-number: #5BE7FE;
+    --automation-border: #5B6283;
+    --tabs-nav-title: #ACBDD7;
+    --tabs-nav-p: #686F87;
+    --tabs-nav-active: #fff; 
+    --tabs-nav-li-border: #686F87;
+    --tabs-nav-li-border-hover: #4A4E62;
+    --tabs-nav-li-bg: #4A4E62;
+    --automation-slider-item-p: #ACBDD7;
+    --automation-slider-item-order: rgba(255, 255, 255, 0.05);
+    --automation-slider-item-order-arrow: #fff;
+    --automation-slider-item-order-cicle: rgba(103, 111, 139, 0.4);
+    --automation-slider-item-order-hover: #5BE7FE;
+    --campaigns-info: #fff;
+    --price-bg: rgba(123, 200, 224, 0.06);  
+    --price-subtitle: #66D2F9;
+    --price-col-p: #ACBDD7;
+    --price-item-hover: rgba(157, 177, 217, 0.05);
+    --price-item-bage: #fff;
+    --modal-bg: rgba(30, 35, 40, .9);
+    --modal-dialog-bg: #353C46;
+    --reviews-slider-item-bg: rgba(123, 200, 224, 0.07);
+    --reviews-slider-item-author-info-post: #8F99BE;
+    --faq-item: rgba(147, 155, 188, 0.06);
+    --faq-item-title: #ACBDD7;
+    --footer-bg: #2D3A4B;
+    --footer-border-color: #ACBDD7;
+    --footer-item-h4: #fff;
+    --footer-list-li-a: #ACBDD7;
+    --footer-copy: #ACBDD7;
+    --mob-btn-color: #fff;
+    --nav-bg-mob: #24313F; 
+    --footer-copy-border: #4F5A6F;
+
+
+
+    .price-item-list li:before {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='17' height='17' viewBox='0 0 17 17' fill='none'%3E%3Cpath d='M13.9177 3.39404L15.3333 4.80967L6.33331 13.8097L1.33331 8.80967L2.74894 7.39404L6.33331 10.9815L13.9177 3.39404Z' fill='%23ffffff'/%3E%3C/svg%3E");
+    }
+    .faq-item-title::before {
+      background-image: url("data:image/svg+xml,%3Csvg width='24' height='25' viewBox='0 0 24 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg %3E%3Cpath d='M17.909 7.71875L12 13.6278L6.09084 7.71875L4.5 9.30973L12 16.8097L19.5 9.30973L17.909 7.71875Z' fill='%23ACBDD7'/%3E%3C/g%3E%3C/svg%3E%0A");
+    }
+
+    body {
+      .theme-dark {
+        display: block ;
+      }
+  
+      .theme-light {
+        display: none ;
+      }
+    }
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  html {
+    --htmlBg: #F4F5F9;
+    --textColor: #143054;
+    --logoColor: #142F53;
+    --colorWhite: #fff;
+    --navBg: rgba(244, 245, 249, 0.80);
+    --gray-500: #ADB5BD;
+    --btn-dark: #143054;
+    --btn-dark-hover: #214C83;
+    --btn-dark-text: #BFFFF7;
+    --btn: #143054;
+    --btn-hover: #395FC2;
+    --checbox-color: #C4C9D4;
+    --checbox-active-color: #5B6283;
+    --strategies-info-item-top: #5B6283;
+    --strategies-info-item-top-border: #A6ADCD;
+    --strategies-info-item-bottom: #143054;
+    --automation-item-number: #395fc2;
+    --automation-border: #878EAA;
+    --tabs-nav-title: #5B6283;
+    --tabs-nav-p: #878EAA;
+    --tabs-nav-active: #143054;
+    --tabs-nav-li-border: #F4F5F9;
+    --tabs-nav-li-border-hover: #8D93AD;
+    --tabs-nav-li-bg: #EAECF5;
+    --automation-slider-item-p: #5b6283;
+    --automation-slider-item-order: #eaecf5;
+    --automation-slider-item-order-arrow: #395FC2;
+    --automation-slider-item-order-cicle: #D5D9EB;
+    --automation-slider-item-order-hover: #395FC2;
+    --campaigns-info: #878EAA;
+    --price-bg: #fff;  
+    --price-subtitle: #395FC2;
+    --price-col-p: #5b6283;
+    --price-item-hover: rgba(255, 255, 255, 0.70);
+    --price-item-bage: #1C2844;
+    --modal-bg: rgba(244, 245, 249, .9);
+    --modal-dialog-bg: #fff;
+    --reviews-slider-item-bg: #fff;
+    --reviews-slider-item-author-info-post: #878EAA;
+    --faq-item: #E8EBF5;
+    --faq-item-title: #787E9A;
+    --footer-bg: #dae1f0;
+    --footer-border-color: #8189A6;
+    --footer-item-h4: #7585A5;
+    --footer-list-li-a: #143054;
+    --footer-copy: #7585A5;
+    --mob-btn-color: #142F53;
+    --nav-bg-mob: #fff;
+    --footer-copy-border: rgba(60, 83, 115, .2);
+
+  
+  
+    .price-item-list li:before {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='17' height='17' viewBox='0 0 17 17' fill='none'%3E%3Cpath d='M13.9177 3.39404L15.3333 4.80967L6.33331 13.8097L1.33331 8.80967L2.74894 7.39404L6.33331 10.9815L13.9177 3.39404Z' fill='%23212529'/%3E%3C/svg%3E");
+    }
+  
+    .faq-item-title::before {
+      background-image: url("data:image/svg+xml,%3Csvg width='24' height='25' viewBox='0 0 24 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg%3E%3Cpath d='M17.909 7.71875L12 13.6278L6.09084 7.71875L4.5 9.30973L12 16.8097L19.5 9.30973L17.909 7.71875Z' fill='%23212529'/%3E%3C/g%3E%3C/svg%3E%0A");
+    }
+
+    body {
+      .theme-light {
+        display: block ;
+      }
+      .theme-dark {
+        display: none ;
+      }
+    }
   }
 }

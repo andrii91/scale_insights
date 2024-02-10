@@ -26,29 +26,20 @@ $( document ).ready(function() {
 
   const checkbox = document.querySelector('input[name=mode]');
 
-  checkbox.addEventListener('change', function() {
-      if(this.checked) {
-          trans()
-          document.documentElement.setAttribute('data-theme', 'dark')
-      } else {
-          trans()
-          document.documentElement.setAttribute('data-theme', 'light')
-      }
-  })
+  $('input[name=mode]').change(function() {
+    if($(this).is(':checked')) {
+      document.documentElement.setAttribute('data-theme', 'dark')
+    }else{
+      document.documentElement.setAttribute('data-theme', 'light')
+    }
+  });
 
-  let trans = () => {
-      document.documentElement.classList.add('transition');
-      window.setTimeout(() => {
-          document.documentElement.classList.remove('transition');
-      }, 1000)
-  }
 
   if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
     $('input[name=mode]').each(function() {
       $(this).prop('checked', true); 
     });
 
-    trans()
     document.documentElement.setAttribute('data-theme', 'dark')
 
   } else {
@@ -56,12 +47,9 @@ $( document ).ready(function() {
       $(this).prop('checked', false);
     });
 
-    trans()
     document.documentElement.setAttribute('data-theme', 'light')
   }
 
-
-  
   $(window).scroll(function () {
     return $('.nav').toggleClass("fixed", $(window).scrollTop() > 0);
   });
@@ -103,16 +91,6 @@ $( document ).ready(function() {
     classToRemove: "hidden_animation"
   });
 
-
-  $('.tabs-nav li').click(function(){
-    $(this).parents('.tabs').find('.tabs-nav li').removeClass('active');
-    $(this).addClass('active')
-
-    $(this).parents('.tabs').find('.tabs-item').removeClass('active');
-    $(this).parents('.tabs').find(`#${$(this).data('tab')}`).addClass('active');
-  })
-
-
   $('.automation-slider').slick({
 		rows: 3,
 		dots: false,
@@ -139,10 +117,168 @@ $( document ).ready(function() {
           slidesToScroll: 2,
           dots: true,
         }
+      },
+    ]
+  });
+
+  // Tabs
+
+  $('.tabs-nav li').click(function(){
+    $(this).parents('.tabs').find('.tabs-nav li').removeClass('active');
+    $(this).addClass('active')
+
+    $(this).parents('.tabs').find('.tabs-item').removeClass('active');
+    $(this).parents('.tabs').find(`#${$(this).data('tab')}`).addClass('active');
+  })
+  // end Tabs
+
+
+  // change price type
+
+  $('#checkbox-price').change(function(){
+    $('.price-item-summ>div').removeClass('active');
+
+    if($(this).is(':checked')) {
+      $('.price-item-summ .monthly').addClass('active');
+    }else{
+      $('.price-item-summ .yearly').addClass('active');
+    }
+  })
+
+  // end change price type
+
+
+  // modal
+
+  $('[data-modal]').click(function (e) {
+    e.preventDefault();
+    const modal = $(this).data('modal');
+    $('body').addClass('overflow-hidden')
+    $(modal).addClass('show');
+  })
+
+  $('.modal .close').click(function () {
+    var $this = $(this);
+    $this.parents('.modal').removeClass('show');
+    $('body').removeClass('overflow-hidden')
+  })
+
+  $(document).mouseup(function (e) {
+    var container = $(".modal-dialog");
+    if (container.has(e.target).length === 0) {
+      container.parents('.modal').removeClass('show');
+      $('body').removeClass('overflow-hidden');
+    }
+  });
+
+  $(document).keydown(function (e) {
+    // ESCAPE key pressed 
+    if (e.keyCode == 27) {
+      $('.modal').removeClass('show');
+      $('body').removeClass('overflow-hidden');
+    }
+  })
+  // end modal
+
+  $('.reviews-slider').slick({
+		dots: false,
+		arrows: true,
+		infinite: true,
+		speed: 300,
+		slidesToShow: 3,
+		slidesToScroll: 1,
+    prevArrow:`<div class='slick-prev'><svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none"><path d="M4.49999 10.3096L13.5 4.30956L13.5 16.3096L4.49999 10.3096Z" fill="currentColor"/></svg></div>`,
+    nextArrow:`<div class='slick-next'><svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none"><path d="M16.5 10.3096L7.5 16.3096L7.5 4.30957L16.5 10.3096Z" fill="currentColor"/></svg></div>`,
+    responsive: [
+      {
+        breakpoint: 992,
+        settings: {
+          slidesToShow: 2,
+          arrows: false,
+          dots: true,
+        }
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+          arrows: false,
+          dots: true,
+        }
       }
     ]
-});
+  });
 
+
+  //FAQ
+  $('.faq-item').click(function(e){
+    e.preventDefault();
+
+    $(this).find('.faq-item-title').toggleClass('active');
+    $(this).find('.faq-item-info').slideToggle(200);
+  })
+
+  //mob menu
+  $('.mob-btn').click(function(e){
+    e.preventDefault();
+    var nav = $(this).parents('.nav');
+    var menu = nav.find('.menu');
+  
+    $(this).toggleClass('active');
+    nav.toggleClass('open');
+    menu.toggle(200, function() {
+      if (menu.is(':visible')) {
+        menu.css('display', 'flex');
+      }
+    });
+  });
+
+  $('.strategies-slider, .tabs-slider').slick({
+		dots: true,
+		arrows: false,
+		infinite: true,
+		speed: 300,
+    fade: true,
+    autoplay: true,
+    autoplaySpeed: 4000,
+  });
+
+  var slider = $('.price-items').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    centerMode: true,
+    variableWidth: true,
+    dots: true,
+		arrows: false,
+    infinite: true,
+  });
+
+  function checkWindowSize() {
+    var windowWidth = $(window).width();
+
+    if (windowWidth < 992) { 
+      if (!slider.hasClass('slick-initialized')) {
+        slider.slick({
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          centerMode: true,
+          variableWidth: true,
+          dots: true,
+          arrows: false,
+          infinite: true,
+        });
+      }
+    } else {
+      if (slider.hasClass('slick-initialized')) {
+        slider.slick('unslick');
+      }
+    }
+  }
+
+  // Викликаємо функцію при завантаженні сторінки та при ресайзі вікна
+  checkWindowSize();
+  $(window).resize(checkWindowSize);
+  
 }) 
 
 
