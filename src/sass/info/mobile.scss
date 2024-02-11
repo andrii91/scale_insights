@@ -414,5 +414,7 @@
     margin-left: auto;
     margin-right: auto;
   }
-  
+  .price-checkbox .custom-checkbox::after, .price-checkbox .custom-checkbox::before {
+    display: none;
+  }
 }

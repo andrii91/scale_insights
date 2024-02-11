@@ -998,7 +998,7 @@ h5 {
 
       input {
         ~ .left {
-          border-color: #fff;
+          border: 0;
           color: var(--textColor);
         }
         &:checked {
@@ -1008,13 +1008,15 @@ h5 {
               }
             }
           ~ .right {
-            border-color: #fff;
+            // border-color: #fff;
             color: var(--textColor);
+            border: 0;
           }
 
           ~ .left {
             border-color: var(--price-subtitle);
             color: var(--price-subtitle);
+            border-bottom: 1px dashed var(--price-subtitle);
           }
         }
       }
