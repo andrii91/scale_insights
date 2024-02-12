@@ -19,8 +19,8 @@ $( document ).ready(function() {
     offset: '0%',
     repeat: false, 
     callbackFunction: function(elem, action){
-      counter("num_1", 0, 12, 1500);
-      counter("num_2", 0, 100, 1500);
+      counter("num_1", 0, 12, 1050);
+      counter("num_2", 0, 100, 1050);
     },
   });
 
@@ -91,6 +91,98 @@ $( document ).ready(function() {
     classToRemove: "hidden_animation"
   });
 
+
+  $('.strategies-graph-item, .strategies-graph-text, .strategies-info-item').addClass("hidden_animation")
+  $('.strategies-graph').addClass("hidden_animation").viewportChecker({
+    classToAdd: 'visible animated fadeIn', 
+    offset: '10%',
+    removeClassAfterAnimation: true,
+    classToRemove: "hidden_animation",
+    callbackFunction: function(elem, action){
+      $('.strategies-graph-item:nth-child(1)').removeClass("hidden_animation").addClass('visible animated fadeInUp')
+      
+      setTimeout(function(){
+        $('.strategies-graph-item:nth-child(2)').removeClass("hidden_animation").addClass('visible animated fadeInUp')
+      }, 500)
+
+      setTimeout(function(){
+        $('.strategies-graph-item:nth-child(3)').removeClass("hidden_animation").addClass('visible animated fadeInUp')
+      }, 1000)
+
+      setTimeout(function(){
+        $('.strategies-graph-item:nth-child(4)').removeClass("hidden_animation").addClass('visible animated fadeInUp')
+      }, 1500)
+
+      setTimeout(function(){
+        $('.strategies-graph-text').removeClass("hidden_animation").addClass('visible animated fadeIn')
+        $('.strategies-info-item:nth-child(1)').removeClass("hidden_animation").addClass('visible animated fadeInUp')
+        $('.strategies-info-item:nth-child(2)').removeClass("hidden_animation").addClass('visible animated fadeInUp')
+        $('.strategies-info-item:nth-child(3)').removeClass("hidden_animation").addClass('visible animated fadeInUp')
+      }, 2000)
+    },
+  });
+
+  $('.metrics-graphs-table').addClass("hidden_animation")
+  $('.metrics-img-height').viewportChecker({
+    offset: '40%',
+    removeClassAfterAnimation: true,
+    classToRemove: "hidden_animation",
+    callbackFunction: function(elem, action){
+     $('.metrics-graphs').addClass('visible');
+     setTimeout(function() {
+      $('.metrics-graphs-table').removeClass("hidden_animation").addClass('visible animated fadeInUp')
+     }, 900)
+    },
+  });
+
+  $('.automation-image-animation-border, .automation-image-animation-line-text, .automation-image-animation-title').addClass("hidden_animation")
+  $('.automation-image-animation-svg').viewportChecker({
+    classToAdd: 'visible animated', 
+    offset: '40%',
+    classToRemove: "hidden_animation",
+    callbackFunction: function(elem, action){
+     setTimeout(function() {
+      $('.automation-image-animation-line-text').removeClass("hidden_animation").addClass('visible animated fadeIn')
+     }, 900)
+
+     setTimeout(function() {
+      $('.automation-image-animation-border').removeClass("hidden_animation").addClass('visible animated fadeIn')
+     }, 1300)
+
+     setTimeout(function() {
+      $('.automation-image-animation-title').removeClass("hidden_animation").addClass('visible animated fadeIn')
+     }, 1900)
+
+    },
+  });
+
+  $(`.campaigns-image-animation-item-text, 
+  .campaigns-image-animation-title, 
+  .campaigns-image-animation-border, 
+  .campaigns-image-animation-text-first`).addClass("hidden_animation");
+
+  $('.campaigns-image-animation-svg').viewportChecker({
+    classToAdd: 'visible animated', 
+    offset: '40%',
+    classToRemove: "hidden_animation",
+    callbackFunction: function(elem, action){
+     setTimeout(function() {
+      $('.campaigns-image-animation-item-text').removeClass("hidden_animation").addClass('visible animated fadeIn')
+      $('.campaigns-image-animation-text-first').removeClass("hidden_animation").addClass('visible animated fadeIn')
+     }, 900)
+
+     setTimeout(function() {
+      $('.campaigns-image-animation-border').removeClass("hidden_animation").addClass('visible animated fadeIn')
+     }, 1300)
+
+     setTimeout(function() {
+      $('.campaigns-image-animation-title').removeClass("hidden_animation").addClass('visible animated fadeIn')
+     }, 1900)
+
+    },
+  });
+  
+
   $('.automation-slider').slick({
 		rows: 3,
 		dots: false,
@@ -145,40 +237,20 @@ $( document ).ready(function() {
     }
   })
 
+  $('.custom-checkbox-yearly').click(function(){
+    if($('#checkbox-price').is(':checked')) {
+      $('#checkbox-price').trigger('click');
+    }
+  })
+
+  $('.custom-checkbox-monthly').click(function(){
+    if(!$('#checkbox-price').is(':checked')) {
+      $('#checkbox-price').trigger('click');
+    }
+  })
+
   // end change price type
 
-
-  // modal
-
-  $('[data-modal]').click(function (e) {
-    e.preventDefault();
-    const modal = $(this).data('modal');
-    $('body').addClass('overflow-hidden')
-    $(modal).addClass('show');
-  })
-
-  $('.modal .close').click(function () {
-    var $this = $(this);
-    $this.parents('.modal').removeClass('show');
-    $('body').removeClass('overflow-hidden')
-  })
-
-  $(document).mouseup(function (e) {
-    var container = $(".modal-dialog");
-    if (container.has(e.target).length === 0) {
-      container.parents('.modal').removeClass('show');
-      $('body').removeClass('overflow-hidden');
-    }
-  });
-
-  $(document).keydown(function (e) {
-    // ESCAPE key pressed 
-    if (e.keyCode == 27) {
-      $('.modal').removeClass('show');
-      $('body').removeClass('overflow-hidden');
-    }
-  })
-  // end modal
 
   $('.reviews-slider').slick({
 		dots: false,
@@ -249,8 +321,10 @@ $( document ).ready(function() {
     centerMode: true,
     variableWidth: true,
     dots: true,
-		arrows: false,
+		arrows: true,
     infinite: true,
+    prevArrow:`<div class='transparent-prev'></div>`,
+    nextArrow:`<div class='transparent-next'></div>`,
   });
 
   function checkWindowSize() {
@@ -264,8 +338,10 @@ $( document ).ready(function() {
           centerMode: true,
           variableWidth: true,
           dots: true,
-          arrows: false,
+          arrows: true,
           infinite: true,
+          prevArrow:`<div class='transparent-prev'></div>`,
+          nextArrow:`<div class='transparent-next'></div>`,
         });
       }
     } else {
@@ -278,6 +354,42 @@ $( document ).ready(function() {
   // Викликаємо функцію при завантаженні сторінки та при ресайзі вікна
   checkWindowSize();
   $(window).resize(checkWindowSize);
+
+
+
+
+  // modal
+
+  $('[data-modal]').click(function (e) {
+    e.preventDefault();
+    const modal = $(this).data('modal');
+    $('body').addClass('overflow-hidden')
+    $(modal).addClass('show');
+  })
+
+  $('.modal .close').click(function () {
+    var $this = $(this);
+    $this.parents('.modal').removeClass('show');
+    $('body').removeClass('overflow-hidden')
+  })
+
+  $(document).mouseup(function (e) {
+    var container = $(".modal-dialog");
+    if (container.has(e.target).length === 0) {
+      container.parents('.modal').removeClass('show');
+      $('body').removeClass('overflow-hidden');
+    }
+  });
+
+  $(document).keydown(function (e) {
+    // ESCAPE key pressed 
+    if (e.keyCode == 27) {
+      $('.modal').removeClass('show');
+      $('body').removeClass('overflow-hidden');
+    }
+  })
+  // end modal
+
   
 }) 
 

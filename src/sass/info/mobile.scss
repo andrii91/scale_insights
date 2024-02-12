@@ -154,7 +154,6 @@
   }
 
   .automation {
-    padding: 0;
     text-align: center;
     &-border {
       margin-bottom: 120px;
@@ -416,5 +415,9 @@
   }
   .price-checkbox .custom-checkbox::after, .price-checkbox .custom-checkbox::before {
     display: none;
+  }
+
+  .row.automation {
+    padding: 0;
   }
 }

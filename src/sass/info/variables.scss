@@ -26,6 +26,12 @@ html {
   --btn-dark: #143054;
   --btn-dark-hover: #214C83;
   --btn-dark-text: #BFFFF7;
+
+  --btn-light: #BFFFF7;
+  --btn-light-hover: #214C83;
+  --btn-light-hover-text: #BFFFF7;
+  --btn-light-text: #143054;
+
   --btn: #143054;
   --btn-hover: #395FC2;
   --checbox-color: #C4C9D4;
@@ -38,9 +44,11 @@ html {
   --tabs-nav-title: #5B6283;
   --tabs-nav-p: #878EAA;
   --tabs-nav-active: #143054;
+  --tab-nav-list-border: #5B6283;
   --tabs-nav-li-border: #F4F5F9;
+  --tabs-nav-li-border-active: #212529;
   --tabs-nav-li-border-hover: #8D93AD;
-  --tabs-nav-li-bg: #EAECF5;
+  --tabs-nav-li-bg: #eaecf5;
   --automation-slider-item-p: #5b6283;
   --automation-slider-item-order: #eaecf5;
   --automation-slider-item-order-arrow: #395FC2;
@@ -66,6 +74,9 @@ html {
   --mob-btn-color: #142F53;
   --nav-bg-mob: #fff;
   --footer-copy-border: rgba(60, 83, 115, .2);
+  --menu-li-a-hover: #395FC2;
+  --custom-checkbox-border: #CDD1D9;
+  --custom-checkbox-border-hover: #575E80;
 
 
   .price-item-list li:before {
@@ -86,6 +97,12 @@ html {
     --btn-dark: #BFFFF7;
     --btn-dark-hover: #5BE7FE;
     --btn-dark-text: #222B44;
+
+    --btn-light: #BFFFF7;
+    --btn-light-hover: #5BE7FE;
+    --btn-light-hover-text: #143054;
+    --btn-light-text: #143054;
+
     --btn: #FFF; 
     --btn-hover: #5BE7FE;
     --checbox-color: #ACBDD7;
@@ -98,9 +115,11 @@ html {
     --tabs-nav-title: #ACBDD7;
     --tabs-nav-p: #686F87;
     --tabs-nav-active: #fff;
+    --tab-nav-list-border: #5B6283;
     --tabs-nav-li-border: #686F87;
+    --tabs-nav-li-border-active: #66D2F9;
     --tabs-nav-li-border-hover: #4A4E62;
-    --tabs-nav-li-bg: #4A4E62;
+    --tabs-nav-li-bg: rgba(255, 255, 255, 0.03);
     --automation-slider-item-p: #ACBDD7;
     --automation-slider-item-order: rgba(255, 255, 255, 0.05);
     --automation-slider-item-order-arrow: #fff;
@@ -126,6 +145,10 @@ html {
     --mob-btn-color: #fff;
     --nav-bg-mob: #24313F; 
     --footer-copy-border: #4F5A6F;
+    --menu-li-a-hover: #5BE7FE;
+    --custom-checkbox-border: #68738A;
+    --custom-checkbox-border-hover: #BFFFF7;
+
 
 
     .price-item-list li:before {
@@ -156,6 +179,12 @@ html {
     --btn-dark: #143054;
     --btn-dark-hover: #214C83;
     --btn-dark-text: #BFFFF7;
+  
+    --btn-light: #BFFFF7;
+    --btn-light-hover: #214C83;
+    --btn-light-hover-text: #BFFFF7;
+    --btn-light-text: #143054;
+  
     --btn: #143054;
     --btn-hover: #395FC2;
     --checbox-color: #C4C9D4;
@@ -168,9 +197,11 @@ html {
     --tabs-nav-title: #5B6283;
     --tabs-nav-p: #878EAA;
     --tabs-nav-active: #143054;
+    --tab-nav-list-border: #5B6283;
     --tabs-nav-li-border: #F4F5F9;
+    --tabs-nav-li-border-active: #212529;
     --tabs-nav-li-border-hover: #8D93AD;
-    --tabs-nav-li-bg: #EAECF5;
+    --tabs-nav-li-bg: #eaecf5;
     --automation-slider-item-p: #5b6283;
     --automation-slider-item-order: #eaecf5;
     --automation-slider-item-order-arrow: #395FC2;
@@ -196,6 +227,9 @@ html {
     --mob-btn-color: #142F53;
     --nav-bg-mob: #fff;
     --footer-copy-border: rgba(60, 83, 115, .2);
+    --menu-li-a-hover: #395FC2;
+    --custom-checkbox-border: #CDD1D9;
+    --custom-checkbox-border-hover: #575E80;
 
   
   
@@ -228,7 +262,13 @@ html {
     --btn-dark: #BFFFF7;
     --btn-dark-hover: #5BE7FE;
     --btn-dark-text: #222B44;
-    --btn: #FFF;
+
+    --btn-light: #BFFFF7;
+    --btn-light-hover: #5BE7FE;
+    --btn-light-hover-text: #143054;
+    --btn-light-text: #143054;
+
+    --btn: #FFF; 
     --btn-hover: #5BE7FE;
     --checbox-color: #ACBDD7;
     --checbox-active-color: #BFFFF7;
@@ -239,10 +279,12 @@ html {
     --automation-border: #5B6283;
     --tabs-nav-title: #ACBDD7;
     --tabs-nav-p: #686F87;
-    --tabs-nav-active: #fff; 
+    --tabs-nav-active: #fff;
+    --tab-nav-list-border: #5B6283;
     --tabs-nav-li-border: #686F87;
+    --tabs-nav-li-border-active: #66D2F9;
     --tabs-nav-li-border-hover: #4A4E62;
-    --tabs-nav-li-bg: #4A4E62;
+    --tabs-nav-li-bg: rgba(255, 255, 255, 0.03);
     --automation-slider-item-p: #ACBDD7;
     --automation-slider-item-order: rgba(255, 255, 255, 0.05);
     --automation-slider-item-order-arrow: #fff;
@@ -268,6 +310,9 @@ html {
     --mob-btn-color: #fff;
     --nav-bg-mob: #24313F; 
     --footer-copy-border: #4F5A6F;
+    --menu-li-a-hover: #5BE7FE;
+    --custom-checkbox-border: #68738A;
+    --custom-checkbox-border-hover: #BFFFF7;
 
 
 
@@ -301,6 +346,12 @@ html {
     --btn-dark: #143054;
     --btn-dark-hover: #214C83;
     --btn-dark-text: #BFFFF7;
+  
+    --btn-light: #BFFFF7;
+    --btn-light-hover: #214C83;
+    --btn-light-hover-text: #BFFFF7;
+    --btn-light-text: #143054;
+  
     --btn: #143054;
     --btn-hover: #395FC2;
     --checbox-color: #C4C9D4;
@@ -313,9 +364,11 @@ html {
     --tabs-nav-title: #5B6283;
     --tabs-nav-p: #878EAA;
     --tabs-nav-active: #143054;
+    --tab-nav-list-border: #5B6283;
     --tabs-nav-li-border: #F4F5F9;
+    --tabs-nav-li-border-active: #212529;
     --tabs-nav-li-border-hover: #8D93AD;
-    --tabs-nav-li-bg: #EAECF5;
+    --tabs-nav-li-bg: #eaecf5;
     --automation-slider-item-p: #5b6283;
     --automation-slider-item-order: #eaecf5;
     --automation-slider-item-order-arrow: #395FC2;
@@ -341,8 +394,9 @@ html {
     --mob-btn-color: #142F53;
     --nav-bg-mob: #fff;
     --footer-copy-border: rgba(60, 83, 115, .2);
-
-  
+    --menu-li-a-hover: #395FC2;
+    --custom-checkbox-border: #CDD1D9;
+    --custom-checkbox-border-hover: #575E80;
   
     .price-item-list li:before {
       background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='17' height='17' viewBox='0 0 17 17' fill='none'%3E%3Cpath d='M13.9177 3.39404L15.3333 4.80967L6.33331 13.8097L1.33331 8.80967L2.74894 7.39404L6.33331 10.9815L13.9177 3.39404Z' fill='%23212529'/%3E%3C/svg%3E");
