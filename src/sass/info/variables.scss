@@ -79,6 +79,7 @@ html {
   --custom-checkbox-border-hover: #575E80;
   --slick-dots: #D5D8E1;
   --slick-dots-active: #5B6283;
+  --section-banner-content: linear-gradient(0deg, #222943 0%, #222943 100%), linear-gradient(106deg, #2F3C60 35.06%, #123C49 92.1%), #FFF;
 
 
   .price-item-list li:before {
@@ -152,6 +153,7 @@ html {
     --custom-checkbox-border-hover: #BFFFF7;
     --slick-dots: #5B6283;
     --slick-dots-active: #D5D8E1;
+    --section-banner-content: rgba(149, 190, 228, 0.07);
 
 
     .price-item-list li:before {
@@ -235,6 +237,7 @@ html {
     --custom-checkbox-border-hover: #575E80;
     --slick-dots: #D5D8E1;
     --slick-dots-active: #5B6283;
+    --section-banner-content: linear-gradient(0deg, #222943 0%, #222943 100%), linear-gradient(106deg, #2F3C60 35.06%, #123C49 92.1%), #FFF;
   
   
     .price-item-list li:before {
@@ -319,8 +322,7 @@ html {
     --custom-checkbox-border-hover: #BFFFF7;
     --slick-dots: #5B6283;
     --slick-dots-active: #D5D8E1;
-
-
+    --section-banner-content: rgba(149, 190, 228, 0.07);
 
     .price-item-list li:before {
       background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='17' height='17' viewBox='0 0 17 17' fill='none'%3E%3Cpath d='M13.9177 3.39404L15.3333 4.80967L6.33331 13.8097L1.33331 8.80967L2.74894 7.39404L6.33331 10.9815L13.9177 3.39404Z' fill='%23ffffff'/%3E%3C/svg%3E");
@@ -405,6 +407,7 @@ html {
     --custom-checkbox-border-hover: #575E80;
     --slick-dots: #D5D8E1;
     --slick-dots-active: #5B6283;
+    --section-banner-content: linear-gradient(0deg, #222943 0%, #222943 100%), linear-gradient(106deg, #2F3C60 35.06%, #123C49 92.1%), #FFF;
   
     .price-item-list li:before {
       background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='17' height='17' viewBox='0 0 17 17' fill='none'%3E%3Cpath d='M13.9177 3.39404L15.3333 4.80967L6.33331 13.8097L1.33331 8.80967L2.74894 7.39404L6.33331 10.9815L13.9177 3.39404Z' fill='%23212529'/%3E%3C/svg%3E");

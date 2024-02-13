@@ -336,7 +336,7 @@ html.transition *:after {
     }
 
     &-content {
-      background: linear-gradient(0deg, #222943 0%, #222943 100%), linear-gradient(106deg, #2F3C60 35.06%, #123C49 92.1%), #FFF;
+      background: var(--section-banner-content);
       display: flex;
       align-items: center;
 
