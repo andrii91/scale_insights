@@ -1739,10 +1739,10 @@ h5 {
     width: 30px;
     height: 4px;
     border-radius: 3px;
-    background: #D5D8E1;
+    background: var(--slick-dots);
 
     &.slick-active {
-      background: #5B6283;
+      background: var(--slick-dots-active);
     }
     
     button {
