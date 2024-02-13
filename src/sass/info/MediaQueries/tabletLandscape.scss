@@ -16,25 +16,45 @@
         margin-left: -116px;
 
         &:first-child {
-          left: inherit;
-          right: 0;
+          display: flex;
+          justify-content: flex-end;
         }
       }
     
   }
 
+
   .strategies-info {
     max-width: 860px;
     display: flex;
     &-item {
-      &:nth-child(3) {
-        margin: 0;
+      &:nth-child(1) {
+        width: 190px;
       }
+      
       &:nth-child(2) {
-        width: 199px;
-        margin-right: 45px;
+        width: 160px;
+      }
+
+      &:nth-child(3) {
+        margin-left: 0;
+        margin-right: 63px;
       }
     }
+  }
+
+  .strategies-info-item:nth-child(1) .strategies-info-item-top::after {
+    top: -33px;
+  }
+
+  .campaigns-image-animation-svg  {
+    svg {
+      width: 100%;
+    }
+  }
+
+  .metrics-graphs-table {
+    width: 500px;
   }
 
   .menu a {
@@ -46,7 +66,6 @@
   }
 
   .metrics-graphs {
-    width: 100%;
     svg {
       width: 100%;
       object-fit: cover;

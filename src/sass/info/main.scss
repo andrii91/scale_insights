@@ -445,35 +445,16 @@ h2 {
     }
 
     &-item {
-      position: absolute;
-      left: 0;
+      
+    }
+  
+    &-row  {
+      width: 20px;
+      overflow: hidden;
+      transition: 700ms;
 
-      &:nth-child(1) {
-        left: 0;
-        svg {
-          max-width: 1180px;
-        }
-      }
-      &:nth-child(2) {
-        top: 39px;
-        
-        svg {
-          max-width: 1062px;
-        }
-      }
-      &:nth-child(3) {
-        top: 80px;
-       
-        svg {
-          max-width: 733px;
-        }
-      }
-      &:nth-child(4) {
-        top: 120px;
-       
-        svg {
-          max-width: 417px;
-        }
+      &.visible {
+        width: 100%;
       }
     }
   }
@@ -677,7 +658,7 @@ h5 {
     left: 0;
     z-index: 1;
     width: 380px;
-    transition: 1s;
+    transition: 700ms;
     overflow: hidden;
 
     &.visible {
@@ -720,6 +701,7 @@ h5 {
       bottom: 28px;
       right: 52px;
       z-index: 3;
+      width: 657px;
     }
   }
 }
@@ -943,8 +925,10 @@ h5 {
     &-animation {
       display: block;
       width: 100%;
-      max-width: 100%;
+      max-width: 1116px;
       padding-top: 8px;
+      margin-left: auto;
+      margin-right: auto;
 
       &-svg {
         width: 0;

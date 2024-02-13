@@ -92,33 +92,21 @@ $( document ).ready(function() {
   });
 
 
-  $('.strategies-graph-item, .strategies-graph-text, .strategies-info-item').addClass("hidden_animation")
-  $('.strategies-graph').addClass("hidden_animation").viewportChecker({
-    classToAdd: 'visible animated fadeIn', 
+  $('.strategies-graph-text, .strategies-info-item').addClass("hidden_animation")
+  $('.strategies-graph').viewportChecker({
+    classToAdd: 'visible animated', 
     offset: '10%',
-    removeClassAfterAnimation: true,
     classToRemove: "hidden_animation",
     callbackFunction: function(elem, action){
-      $('.strategies-graph-item:nth-child(1)').removeClass("hidden_animation").addClass('visible animated fadeInUp')
-      
-      setTimeout(function(){
-        $('.strategies-graph-item:nth-child(2)').removeClass("hidden_animation").addClass('visible animated fadeInUp')
-      }, 500)
 
-      setTimeout(function(){
-        $('.strategies-graph-item:nth-child(3)').removeClass("hidden_animation").addClass('visible animated fadeInUp')
-      }, 1000)
-
-      setTimeout(function(){
-        $('.strategies-graph-item:nth-child(4)').removeClass("hidden_animation").addClass('visible animated fadeInUp')
-      }, 1500)
+      $('.strategies-graph-row').addClass('visible animated');
 
       setTimeout(function(){
         $('.strategies-graph-text').removeClass("hidden_animation").addClass('visible animated fadeIn')
         $('.strategies-info-item:nth-child(1)').removeClass("hidden_animation").addClass('visible animated fadeInUp')
         $('.strategies-info-item:nth-child(2)').removeClass("hidden_animation").addClass('visible animated fadeInUp')
         $('.strategies-info-item:nth-child(3)').removeClass("hidden_animation").addClass('visible animated fadeInUp')
-      }, 2000)
+      }, 1000)
     },
   });
 
@@ -131,7 +119,7 @@ $( document ).ready(function() {
      $('.metrics-graphs').addClass('visible');
      setTimeout(function() {
       $('.metrics-graphs-table').removeClass("hidden_animation").addClass('visible animated fadeInUp')
-     }, 900)
+     }, 600)
     },
   });
 
