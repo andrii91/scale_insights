@@ -89,6 +89,10 @@ html {
   .faq-item-title::before {
     background-image: url("data:image/svg+xml,%3Csvg width='24' height='25' viewBox='0 0 24 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg%3E%3Cpath d='M17.909 7.71875L12 13.6278L6.09084 7.71875L4.5 9.30973L12 16.8097L19.5 9.30973L17.909 7.71875Z' fill='%23212529'/%3E%3C/g%3E%3C/svg%3E%0A");
   }
+
+  --mission-item-left: #9D43C6;
+  --mission-item-left-border: #878EAA;
+  --about-us-item-card: #EAECF5;
   
 
   &[data-theme=dark] {
@@ -172,6 +176,10 @@ html {
         display: none ;
       }
     }
+
+  --mission-item-left: #BB69E0;
+  --mission-item-left-border: #5B6283;
+  --about-us-item-card: rgba(255, 255, 255, 0.05);
   } 
 
   &[data-theme=light] {
@@ -256,6 +264,10 @@ html {
         display: none ;
       }
     }
+
+    --mission-item-left: #9D43C6;
+    --mission-item-left-border: #878EAA;
+    --about-us-item-card: #EAECF5;
   }
 }
 
@@ -340,6 +352,10 @@ html {
         display: none ;
       }
     }
+
+    --mission-item-left: #BB69E0;
+    --mission-item-left-border: #5B6283;
+    --about-us-item-card: rgba(255, 255, 255, 0.05);
   }
 }
 
@@ -425,5 +441,8 @@ html {
         display: none ;
       }
     }
+    --mission-item-left: #9D43C6;
+    --mission-item-left-border: #878EAA;
+    --about-us-item-card: #EAECF5;
   }
 }

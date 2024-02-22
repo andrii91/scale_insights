@@ -420,4 +420,60 @@
   .row.automation {
     padding: 0;
   }
+
+  .mission {
+    padding-top: 25px;
+    &-item {
+      flex-direction: column;
+      padding: 0px 0px;
+      align-items: center;
+      text-align: center;
+  
+      &-left {
+        padding-right: 0px;
+        margin-right: 0px;
+        font-size: 16px;
+        min-width: auto;
+        padding-bottom: 10px;
+        margin-bottom: 10px;
+        border-right: 0;
+        border-bottom: 1px solid var(--mission-item-left-border);
+      }
+  
+      &-right {
+        font-size: 16px;
+      }
+    }
+  }
+
+  .about-us {
+    &-item {
+      &-card {
+        max-width: 236px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+
+    &-row {
+      flex-direction: column;
+      padding-bottom: 0 !important;
+      align-items: flex-end;
+    }
+
+    .about-us-item-content {
+      width: 100%;
+      position: static;
+      padding: 32px 0;
+      margin-top: 39px;
+
+      p {
+        max-width: 100%;
+      }
+    }
+
+    .about-us-item-card::before {
+      height: 39px;
+    }
+  }
 }

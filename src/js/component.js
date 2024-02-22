@@ -378,6 +378,28 @@ $( document ).ready(function() {
   })
   // end modal
 
+  //about us
+
+  $('.about-us-item-card').hover(function(){
+    const windowWidth = $(window).width();
+
+    $('.about-us-item').removeClass('active');
+    const $this = $(this).parents();
+    $this.addClass('active');
+    $this.parents('.about-us-row').css({
+      "padding-bottom": $this.find('.about-us-item-content').height() + 108
+    })
+
+    if (windowWidth < 992) {
+      const top = $this.offset().top;
+
+      $('body,html').animate({
+        scrollTop: top - 90
+      }, 0);
+    }
+    
+  })
+
   
 }) 
 
