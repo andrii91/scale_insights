@@ -476,4 +476,45 @@
       height: 39px;
     }
   }
+
+  .head-bottom {
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 80px;
+    padding-bottom: 5px;
+
+    &-border {
+      display: none;
+    }
+  }
+
+  .contact-us {
+    padding-bottom: 100px;
+
+    &-banner {
+      &-bg {
+        padding-top: 124px;
+        padding-bottom: 99px;
+        background: url(../images/image21-mob.webp) no-repeat center;
+        background-size: cover;
+      }
+  
+      &-item {
+        max-width: 100%;
+        padding: 0 40px;
+        text-align: center;
+    
+        h3 {
+          font-size: 38px;
+        }
+      }
+  
+      &-content {
+        max-width: 100%;
+        padding: 20px 40px;
+      }
+    }
+  }
 }

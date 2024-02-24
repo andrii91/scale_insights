@@ -93,7 +93,8 @@ html {
   --mission-item-left: #9D43C6;
   --mission-item-left-border: #878EAA;
   --about-us-item-card: #EAECF5;
-  
+  --menu-li-a-current: #395FC2;
+  --contact-us-banner: linear-gradient(0deg, #222943 0%, #222943 100%), linear-gradient(106deg, #2F3C60 35.06%, #123C49 92.1%), #FFF;
 
   &[data-theme=dark] {
     --htmlBg: linear-gradient(0deg, rgba(41, 42, 49, 0.40) 0%, rgba(41, 42, 49, 0.40) 100%), linear-gradient(90deg, rgba(173, 0, 255, 0.10) 0%, rgba(11, 55, 201, 0.10) 50.47%, rgba(0, 216, 255, 0.10) 100%), #242734;
@@ -139,7 +140,7 @@ html {
     --price-item-hover: rgba(157, 177, 217, 0.05);
     --price-item-bage: #fff;
     --modal-bg: rgba(30, 35, 40, .9);
-    --modal-dialog-bg: #353C46;
+    --modal-dialog-bg: #303845;
     --reviews-slider-item-bg: rgba(123, 200, 224, 0.07);
     --reviews-slider-item-author-info-post: #8F99BE;
     --faq-item: rgba(147, 155, 188, 0.06);
@@ -180,6 +181,8 @@ html {
   --mission-item-left: #BB69E0;
   --mission-item-left-border: #5B6283;
   --about-us-item-card: rgba(255, 255, 255, 0.05);
+  --menu-li-a-current: #66D2F9;
+  --contact-us-banner: #2B3A4A;
   } 
 
   &[data-theme=light] {
@@ -268,6 +271,9 @@ html {
     --mission-item-left: #9D43C6;
     --mission-item-left-border: #878EAA;
     --about-us-item-card: #EAECF5;
+    --menu-li-a-current: #395FC2;
+    --contact-us-banner: linear-gradient(0deg, #222943 0%, #222943 100%), linear-gradient(106deg, #2F3C60 35.06%, #123C49 92.1%), #FFF;
+    
   }
 }
 
@@ -316,7 +322,7 @@ html {
     --price-item-hover: rgba(157, 177, 217, 0.05);
     --price-item-bage: #fff;
     --modal-bg: rgba(30, 35, 40, .9);
-    --modal-dialog-bg: #353C46;
+    --modal-dialog-bg: #303845;
     --reviews-slider-item-bg: rgba(123, 200, 224, 0.07);
     --reviews-slider-item-author-info-post: #8F99BE;
     --faq-item: rgba(147, 155, 188, 0.06);
@@ -356,6 +362,9 @@ html {
     --mission-item-left: #BB69E0;
     --mission-item-left-border: #5B6283;
     --about-us-item-card: rgba(255, 255, 255, 0.05);
+    --menu-li-a-current: #66D2F9;
+    --contact-us-banner: #2B3A4A;
+
   }
 }
 
@@ -444,5 +453,8 @@ html {
     --mission-item-left: #9D43C6;
     --mission-item-left-border: #878EAA;
     --about-us-item-card: #EAECF5;
+    --menu-li-a-current: #395FC2;
+    --contact-us-banner: linear-gradient(0deg, #222943 0%, #222943 100%), linear-gradient(106deg, #2F3C60 35.06%, #123C49 92.1%), #FFF;
+
   }
 }

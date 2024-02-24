@@ -70,9 +70,24 @@ html.transition *:after {
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
-    line-height: 1;
+    line-height: 200%; /* 32px */
     transition: .3s;
     cursor: pointer;
+
+    &:not(.primary-button) {
+     &.current {
+      position: relative;
+      &::after {
+        content: "";
+        height: 3px;
+        width: 100%;
+        background: var(--menu-li-a-current);
+        position: absolute;
+        bottom: 0;
+        left: 0;
+      }
+     }
+    }
 
     &:hover {
       color: var(--menu-li-a-hover);
@@ -243,6 +258,56 @@ html.transition *:after {
     }
     
   }
+
+  &-bottom {
+    display: flex;
+    gap: 24px;
+    justify-content: space-between;
+    padding: 100px 0 85px;
+
+    &-item {
+      max-width: 304px;
+
+      h4 {
+        color: var(--textColor);
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 160%; /* 32px */
+        margin-bottom: 16px;
+      }
+
+      p {
+        color: var(--textColor);
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 160%; /* 25.6px */
+        margin-bottom: 32px;
+      }
+
+      .primary-button {
+        min-width: 193px;
+        text-align: center;
+      }
+    }
+
+    &-border {
+      background: #878EAA;
+      width: 1px;
+      height: 100%;
+      min-height: 188px;
+    }
+  }
+
+  &-features {
+    .head-item {
+      p {
+        margin-bottom: 40px;
+      }
+    }
+  }
+
 }
 
 .custom-checkbox {
@@ -1900,7 +1965,175 @@ h5 {
       }
     }
   }
+}
 
+.contact-us {
+  padding-bottom: 142px;
+  &-banner {
+    border-radius: 14px;
+    background: var(--contact-us-banner);
+    overflow: hidden;
+    text-align: left;
+
+    &-bg {
+      background: url('../images/image21.webp') no-repeat center;
+      background-size: cover;
+      padding-top: 58px;
+      padding-bottom: 58px;
+    }
+
+    h3 {
+      color: #fff;
+      font-size: 50px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 120%; /* 60px */
+      margin-bottom: 60px;
+    }
+
+    .primary-button {
+      color: #FFF;
+      border: 1px solid #FFF;
+
+      &:hover {
+        color: #5BE7FE;
+        border-color: #5BE7FE;
+      }
+    }
+
+    p {
+      color: #FFF;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 180%; /* 28.8px */
+    }
+
+    &-item {
+      max-width: 483px;
+      margin: auto;
+    }
+
+    &-content {
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+      max-width: 369px;
+      margin: auto;
+    }
+  }
+}
+
+.features {
+  &-tabs {
+    .tabs-content {
+      margin-left: -12px;
+      margin-right: -12px;
+
+      img {
+        max-width: 700px;
+        margin-left: auto;
+      }
+    }
+  }
+}
+
+.algorithms {
+  &-item {
+
+    display: none;
+    border-radius: 14px;
+    background: #EAECF5;
+    padding: 40px;
+    margin-top: 50px;
+
+    .col-lg-4 {
+      padding-right: 40px;
+      border-right: 1px solid #878EAA;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .col-lg-8 {
+      padding-left: 40px;
+    }
+
+    img {
+      max-width: 685px;
+      width: 100%;
+    }
+
+
+    &.active {
+      display: flex;
+    }
+
+    &-left {
+      margin: auto;
+      .title {
+        display: flex;
+        align-items: center;
+        gap: 9px;
+        color: #143054;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 27.527px; /* 137.635% */
+        padding: 16px auto;
+        margin-bottom: 8px;
+
+        svg {
+          width: 26px;
+          height: 26px;
+          color: #24AEA6;
+        }
+      }
+
+      p {
+        color: #5B6283;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 180%; /* 28.8px */
+      }
+    }
+
+    &-top {
+      border-radius: 14px;
+      display: flex;
+      max-width: 280px;
+      padding: 16px;
+      flex-direction: row;
+      align-items: center;
+      gap: 8px;
+      color: #5B6283;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 27.527px; /* 172.044% */
+      transition: .15s;
+      cursor: pointer;
+
+      .icon {
+        width: 20px;
+        height: 20px;
+        color: #24AEA6;
+        transition: .15s;
+      }
+
+      &:hover {
+        background: #EAECF5;
+        .icon {
+          color: #45A19C;
+        }
+      }
+
+      &.active {
+        background: #EAECF5;
+        color: #143054;
+      }
+    }
+  }
 }
 
 body {

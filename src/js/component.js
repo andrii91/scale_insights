@@ -400,6 +400,17 @@ $( document ).ready(function() {
     
   })
 
+
+  //
+
+  $('[data-id]').click(function(){
+    $(this).parents('.section').find('[data-id]').removeClass('active');
+    $(this).parents('.section').find('[data-ids-row]>div').removeClass('active');
+
+    $(this).addClass('active');
+    $(`#${$(this).data('id')}`).addClass('active')
+  })
+
   
 }) 
 
