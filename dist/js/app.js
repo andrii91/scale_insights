@@ -1,4 +1,16 @@
 $( document ).ready(function() {
+  $('.scroll').click(function (e) {
+    e.preventDefault();
+    var id = $(this).attr('href'),
+      top = $(id).offset().top;
+
+    $('body,html').animate({
+      scrollTop: top - 90
+    }, 1000);
+
+  });
+
+
   function counter(id, start, end, duration) {
     var objId = document.getElementById(id),
       current = start,
@@ -70,6 +82,13 @@ $( document ).ready(function() {
     classToRemove: "hidden_animation"
   });
 
+  $('.head-bottom-border, .contact-us, .section-banner-small').addClass("hidden_animation").viewportChecker({
+    classToAdd: 'visible animated fadeInUp', 
+    offset: '20%',
+    removeClassAfterAnimation: true,
+    classToRemove: "hidden_animation"
+  });
+
   $('.fade-in').addClass("hidden_animation").viewportChecker({
     classToAdd: 'visible animated fadeIn', 
     offset: '20%',
@@ -89,6 +108,42 @@ $( document ).ready(function() {
     offset: '0%',
     removeClassAfterAnimation: true,
     classToRemove: "hidden_animation"
+  });
+
+  $('.head-bottom-item').addClass("hidden_animation")
+  $('.head-bottom').viewportChecker({
+    offset: '0%',
+    removeClassAfterAnimation: true,
+    classToRemove: "hidden_animation",
+    callbackFunction: function(elem, action){
+      $('.show-1').removeClass("hidden_animation").addClass('visible animated fadeInLeft');
+      setTimeout(function(){
+        $('.show-2').removeClass("hidden_animation").addClass('visible animated fadeInLeft');
+      },300)
+
+      setTimeout(function(){
+        $('.show-3').removeClass("hidden_animation").addClass('visible animated fadeInLeft');
+      },600)
+    }
+  });
+
+  $('.about-us-item').addClass("hidden_animation")
+  $('.about-us-row').viewportChecker({
+    offset: '0%',
+    removeClassAfterAnimation: true,
+    classToRemove: "hidden_animation",
+    callbackFunction: function(elem, action){
+
+      for (let index = 1; index <= $('.about-us-item').length; index++) {
+        setTimeout(function(){
+          $(`.about-us-item:nth-child(${index})`).removeClass("hidden_animation").addClass('visible animated fadeInLeft');
+
+          setTimeout(function(){
+            $(`.about-us-item:nth-child(${index})`).removeClass('visible animated fadeInLeft')
+          }, 1000)
+        }, (200*index))
+      }
+    }
   });
 
 
@@ -332,10 +387,14 @@ $( document ).ready(function() {
           nextArrow:`<div class='transparent-next'></div>`,
         });
       }
+
+      $('.about-us-item').removeClass('active')
     } else {
       if (slider.hasClass('slick-initialized')) {
         slider.slick('unslick');
       }
+
+      $('.about-us-item:first-child').addClass('active')
     }
   }
 

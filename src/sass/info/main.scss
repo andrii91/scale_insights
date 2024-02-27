@@ -83,7 +83,7 @@ html.transition *:after {
         width: 100%;
         background: var(--menu-li-a-current);
         position: absolute;
-        bottom: 0;
+        bottom: -4px;
         left: 0;
       }
      }
@@ -148,6 +148,7 @@ html.transition *:after {
   &-dark {
     background: var(--btn-dark);
     color: var(--btn-dark-text);
+    border-color: var(--btn-dark);
 
     &:hover {
       background: var(--btn-dark-hover);
@@ -238,7 +239,7 @@ html.transition *:after {
       font-style: normal;
       font-weight: 600;
       line-height: 160%;
-      margin-bottom: 32px;
+      margin-bottom: 40px;
 
       span {
         color: #9D43C6;
@@ -289,6 +290,12 @@ html.transition *:after {
       .primary-button {
         min-width: 193px;
         text-align: center;
+        border-color: var(--button-coutact-us-border);
+
+        &:hover {
+          color: var(--btn-hover);
+          border-color: var(--btn-hover);
+        }
       }
     }
 
@@ -1245,7 +1252,6 @@ h5 {
       align-items: center;
       border-radius: 54px;
       border: 1px solid var(--gray-500);
-      flex: auto;
       max-width: fit-content;
     }
 
@@ -1303,6 +1309,7 @@ h5 {
       flex-direction: column;
       gap: 12px;
       padding-bottom: 8px;
+      margin: auto;
       li {
         position: relative;
         padding-left: 36px;
@@ -2048,19 +2055,19 @@ h5 {
     margin-top: 50px;
 
     .col-lg-4 {
-      padding-right: 40px;
+      padding-right: 32px;
       border-right: 1px solid #878EAA;
       display: flex;
       flex-direction: column;
     }
 
     .col-lg-8 {
-      padding-left: 40px;
+      padding-left: 32px;
+      padding-right: 0;
     }
 
     img {
-      max-width: 685px;
-      width: 100%;
+      max-width: 100%;
     }
 
 
@@ -2168,7 +2175,12 @@ h5 {
         font-style: normal;
         font-weight: 400;
         line-height: 180%; /* 28.8px */
+
+       p {
+        line-height: 180%; /* 28.8px */
+       }
       }
+      
     } 
   }
 }
