@@ -96,6 +96,10 @@ html {
   --menu-li-a-current: #395FC2;
   --contact-us-banner: linear-gradient(0deg, #222943 0%, #222943 100%), linear-gradient(106deg, #2F3C60 35.06%, #123C49 92.1%), #FFF;
   --button-coutact-us-border: rgba(91, 98, 131, 0.50); 
+  --algorithms-item-bg: #EAECF5;
+  --algorithms-item-p: #5B6283;
+  --algorithms-item-top: #5B6283;
+  --algorithms-item-top-bg: #EAECF5;
 
   &[data-theme=dark] {
     --htmlBg: linear-gradient(0deg, rgba(41, 42, 49, 0.40) 0%, rgba(41, 42, 49, 0.40) 100%), linear-gradient(90deg, rgba(173, 0, 255, 0.10) 0%, rgba(11, 55, 201, 0.10) 50.47%, rgba(0, 216, 255, 0.10) 100%), #242734;
@@ -185,6 +189,10 @@ html {
     --menu-li-a-current: #66D2F9;
     --contact-us-banner: #2B3A4A;
     --button-coutact-us-border: #878EAA;
+    --algorithms-item-bg: rgba(255, 255, 255, 0.05);
+    --algorithms-item-p: #fff;
+    --algorithms-item-top: #ACBDD7;
+    --algorithms-item-top-bg: rgba(255, 255, 255, 0.05);    
   } 
 
   &[data-theme=light] {
@@ -276,6 +284,10 @@ html {
     --menu-li-a-current: #395FC2;
     --contact-us-banner: linear-gradient(0deg, #222943 0%, #222943 100%), linear-gradient(106deg, #2F3C60 35.06%, #123C49 92.1%), #FFF;
     --button-coutact-us-border: rgba(91, 98, 131, 0.50);
+    --algorithms-item-bg: #EAECF5;
+    --algorithms-item-p: #5B6283;
+    --algorithms-item-top: #5B6283;
+    --algorithms-item-top-bg: #EAECF5;
   }
 }
 
@@ -367,6 +379,10 @@ html {
     --menu-li-a-current: #66D2F9;
     --contact-us-banner: #2B3A4A;
     --button-coutact-us-border: #878EAA;
+    --algorithms-item-bg: rgba(255, 255, 255, 0.05);
+    --algorithms-item-p: #fff;
+    --algorithms-item-top: #ACBDD7;
+    --algorithms-item-top-bg: rgba(255, 255, 255, 0.05);
   }
 }
 
@@ -458,5 +474,9 @@ html {
     --menu-li-a-current: #395FC2;
     --contact-us-banner: linear-gradient(0deg, #222943 0%, #222943 100%), linear-gradient(106deg, #2F3C60 35.06%, #123C49 92.1%), #FFF;
     --button-coutact-us-border: rgba(91, 98, 131, 0.50);
+    --algorithms-item-bg: #EAECF5;
+    --algorithms-item-p: #5B6283;
+    --algorithms-item-top: #5B6283;
+    --algorithms-item-top-bg: #EAECF5;
   }
 }
