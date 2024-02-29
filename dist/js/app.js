@@ -10,24 +10,6 @@ $( document ).ready(function() {
 
   });
 
-  function scrollToHash() {
-    var url = window.location.href;
-    var hashIndex = url.indexOf('#');
-    
-    if (hashIndex !== -1) {
-      var hash = url.slice(hashIndex + 1);
-      
-      // Дождаться полной загрузки страницы
-      $(window).on('load', function() {
-        // Плавный скролл к якорю
-        $('html, body').animate({
-          scrollTop: $('#' + hash).offset().top - 90
-        }, 100);
-      });
-    }
-  }
-  
-  setTimeout(scrollToHash, 600)
 
   function counter(id, start, end, duration) {
     var objId = document.getElementById(id),
