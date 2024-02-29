@@ -6,7 +6,7 @@ $( document ).ready(function() {
 
     $('body,html').animate({
       scrollTop: top - 90
-    }, 1000);
+    }, 700);
 
   });
 
@@ -22,11 +22,12 @@ $( document ).ready(function() {
         // Плавный скролл к якорю
         $('html, body').animate({
           scrollTop: $('#' + hash).offset().top - 90
-        }, 10);
+        }, 100);
       });
     }
   }
-  scrollToHash();
+  
+  setTimeout(scrollToHash, 600)
 
   function counter(id, start, end, duration) {
     var objId = document.getElementById(id),
