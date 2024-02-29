@@ -795,7 +795,7 @@ h5 {
     li {
       padding: 30px 40px;
       cursor: pointer;
-      border-left: 4px solid var(--tabs-nav-li-border);
+      border-left: 4px solid transparent;
       transition: .3s;
 
       .title {
@@ -821,6 +821,10 @@ h5 {
 
       &.active {
         border-color: var(--tabs-nav-li-border-active);
+
+        &:hover {
+          border-color: var(--tabs-nav-li-border-active);
+        }
 
         .title, p {
           color: var(--tabs-nav-active);
@@ -1559,7 +1563,8 @@ h5 {
       transition: .3s;
 
       &:hover {
-        color: var(--gray-500);
+        color: var(--reviews-slider-item-hover-svg);
+        background: var(--reviews-slider-item-hover-bg);
       }
 
       &.slick-next {

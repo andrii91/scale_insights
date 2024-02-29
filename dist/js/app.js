@@ -62,6 +62,10 @@ $( document ).ready(function() {
     document.documentElement.setAttribute('data-theme', 'light')
   }
 
+  if ($(window).scrollTop() > 0) {
+    $('.nav').addClass("fixed");
+  }
+
   $(window).scroll(function () {
     return $('.nav').toggleClass("fixed", $(window).scrollTop() > 0);
   });
@@ -116,13 +120,13 @@ $( document ).ready(function() {
     removeClassAfterAnimation: true,
     classToRemove: "hidden_animation",
     callbackFunction: function(elem, action){
-      $('.show-1').removeClass("hidden_animation").addClass('visible animated fadeInLeft');
+      $('.show-1').removeClass("hidden_animation").addClass('visible animated fadeIn');
       setTimeout(function(){
-        $('.show-2').removeClass("hidden_animation").addClass('visible animated fadeInLeft');
+        $('.show-2').removeClass("hidden_animation").addClass('visible animated fadeIn');
       },300)
 
       setTimeout(function(){
-        $('.show-3').removeClass("hidden_animation").addClass('visible animated fadeInLeft');
+        $('.show-3').removeClass("hidden_animation").addClass('visible animated fadeIn');
       },600)
     }
   });
@@ -136,10 +140,10 @@ $( document ).ready(function() {
 
       for (let index = 1; index <= $('.about-us-item').length; index++) {
         setTimeout(function(){
-          $(`.about-us-item:nth-child(${index})`).removeClass("hidden_animation").addClass('visible animated fadeInLeft');
+          $(`.about-us-item:nth-child(${index})`).removeClass("hidden_animation").addClass('visible animated fadeIn');
 
           setTimeout(function(){
-            $(`.about-us-item:nth-child(${index})`).removeClass('visible animated fadeInLeft')
+            $(`.about-us-item:nth-child(${index})`).removeClass('visible animated fadeIn')
           }, 1000)
         }, (200*index))
       }
@@ -302,8 +306,8 @@ $( document ).ready(function() {
 		speed: 300,
 		slidesToShow: 3,
 		slidesToScroll: 1,
-    prevArrow:`<div class='slick-prev'><svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none"><path d="M4.49999 10.3096L13.5 4.30956L13.5 16.3096L4.49999 10.3096Z" fill="currentColor"/></svg></div>`,
-    nextArrow:`<div class='slick-next'><svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none"><path d="M16.5 10.3096L7.5 16.3096L7.5 4.30957L16.5 10.3096Z" fill="currentColor"/></svg></div>`,
+    prevArrow:`<div class='slick-prev'><svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none"><path d="M4.24807 11.4072C3.65433 11.0114 3.65433 10.139 4.24807 9.74314L13.4453 3.61165C14.1099 3.16862 15 3.64501 15 4.4437L15 16.7067C15 17.5054 14.1099 17.9818 13.4453 17.5387L4.24807 11.4072Z" fill="currentColor"/></svg></div>`,
+    nextArrow:`<div class='slick-next'><svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none"><path d="M16.7519 9.74314C17.3457 10.139 17.3457 11.0114 16.7519 11.4072L7.5547 17.5387C6.89014 17.9818 6 17.5054 6 16.7067L6 4.44371C6 3.64502 6.89015 3.16863 7.5547 3.61166L16.7519 9.74314Z" fill="currentColor"/></svg></div>`,
     responsive: [
       {
         breakpoint: 992,
