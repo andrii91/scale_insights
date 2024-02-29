@@ -10,6 +10,23 @@ $( document ).ready(function() {
 
   });
 
+  function scrollToHash() {
+    var url = window.location.href;
+    var hashIndex = url.indexOf('#');
+    
+    if (hashIndex !== -1) {
+      var hash = url.slice(hashIndex + 1);
+      
+      // Дождаться полной загрузки страницы
+      $(window).on('load', function() {
+        // Плавный скролл к якорю
+        $('html, body').animate({
+          scrollTop: $('#' + hash).offset().top - 90
+        }, 10);
+      });
+    }
+  }
+  scrollToHash();
 
   function counter(id, start, end, duration) {
     var objId = document.getElementById(id),
@@ -86,7 +103,21 @@ $( document ).ready(function() {
     classToRemove: "hidden_animation"
   });
 
-  $('.head-bottom-border, .contact-us, .section-banner-small').addClass("hidden_animation").viewportChecker({
+  $('.fade-in-up-0, .section-banner-small').addClass("hidden_animation").viewportChecker({
+    classToAdd: 'visible animated fadeInUp', 
+    offset: '5%',
+    removeClassAfterAnimation: true,
+    classToRemove: "hidden_animation"
+  });
+
+  $('.profit-img').addClass("hidden_animation").viewportChecker({
+    classToAdd: 'visible animated fadeInUp', 
+    offset: '0%',
+    removeClassAfterAnimation: true,
+    classToRemove: "hidden_animation"
+  });
+
+  $('.head-bottom-border, .contact-us').addClass("hidden_animation").viewportChecker({
     classToAdd: 'visible animated fadeInUp', 
     offset: '20%',
     removeClassAfterAnimation: true,

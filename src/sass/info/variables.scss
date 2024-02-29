@@ -102,6 +102,8 @@ html {
   --algorithms-item-top-bg: #EAECF5;
   --reviews-slider-item-hover-bg: #fff;
   --reviews-slider-item-hover-svg: #395FC2;
+  --profit-bg: linear-gradient(0deg, rgba(41, 42, 49, 0.40) 0%, rgba(41, 42, 49, 0.40) 100%), linear-gradient(90deg, rgba(173, 0, 255, 0.10) 0%, rgba(11, 55, 201, 0.10) 50.47%, rgba(0, 216, 255, 0.10) 100%), #242734;
+  --tabs-slider-item-p: #143054;
 
   &[data-theme=dark] {
     --htmlBg: linear-gradient(0deg, rgba(41, 42, 49, 0.40) 0%, rgba(41, 42, 49, 0.40) 100%), linear-gradient(90deg, rgba(173, 0, 255, 0.10) 0%, rgba(11, 55, 201, 0.10) 50.47%, rgba(0, 216, 255, 0.10) 100%), #242734;
@@ -197,6 +199,8 @@ html {
     --algorithms-item-top-bg: rgba(255, 255, 255, 0.05);    
     --reviews-slider-item-hover-bg: #454F62;
     --reviews-slider-item-hover-svg: #66D2F9;
+    --profit-bg: linear-gradient(90deg, #4A3D66 0%, #3B4362 53%, #3A5266 100%);    
+    --tabs-slider-item-p: #ACBDD7;
   } 
 
   &[data-theme=light] {
@@ -294,6 +298,8 @@ html {
     --algorithms-item-top-bg: #EAECF5;
     --reviews-slider-item-hover-bg: #fff;
     --reviews-slider-item-hover-svg: #395FC2;
+    --profit-bg: linear-gradient(0deg, rgba(41, 42, 49, 0.40) 0%, rgba(41, 42, 49, 0.40) 100%), linear-gradient(90deg, rgba(173, 0, 255, 0.10) 0%, rgba(11, 55, 201, 0.10) 50.47%, rgba(0, 216, 255, 0.10) 100%), #242734;
+    --tabs-slider-item-p: #143054;
   }
 }
 
@@ -391,6 +397,8 @@ html {
     --algorithms-item-top-bg: rgba(255, 255, 255, 0.05);
     --reviews-slider-item-hover-bg: #454F62;
     --reviews-slider-item-hover-svg: #66D2F9;
+    --profit-bg:  linear-gradient(90deg, #4A3D66 0%, #3B4362 53%, #3A5266 100%);
+    --tabs-slider-item-p: #ACBDD7;
   }
 }
 
@@ -488,5 +496,7 @@ html {
     --algorithms-item-top-bg: #EAECF5;
     --reviews-slider-item-hover-bg: #fff;
     --reviews-slider-item-hover-svg: #395FC2;
+    --profit-bg: linear-gradient(0deg, rgba(41, 42, 49, 0.40) 0%, rgba(41, 42, 49, 0.40) 100%), linear-gradient(90deg, rgba(173, 0, 255, 0.10) 0%, rgba(11, 55, 201, 0.10) 50.47%, rgba(0, 216, 255, 0.10) 100%), #242734;
+    --tabs-slider-item-p: #143054;
   }
 }

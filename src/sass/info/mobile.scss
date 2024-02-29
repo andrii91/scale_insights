@@ -209,6 +209,7 @@
           font-style: normal;
           font-weight: 400;
           line-height: 160%; /* 25.6px */
+          color: var(--tabs-slider-item-p);
         }
       }
     }
@@ -321,7 +322,7 @@
 
     &-items {
       gap: 0;
-      margin: 0 -10px;
+      margin: 0 -22px;
 
       .slick-slide {
         margin: 0 10px;
@@ -530,5 +531,32 @@
 
   .price-subtitle {
     margin-bottom: 40px;
+  }
+
+  .profit {
+    h2 {
+      margin-top: 0;
+    }
+
+    h5 {
+      margin-bottom: 16px;
+    }
+
+    &-item {
+      padding-bottom: 150px;
+      margin-bottom: 16px;
+    }
+
+    &-img {
+      &-large {
+        margin-left: 0;
+      }
+    }
+  }
+
+  .advertising {
+    .tabs-slider-item-img {
+      
+    }
   }
 }
