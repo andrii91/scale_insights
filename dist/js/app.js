@@ -388,78 +388,18 @@ $( document ).ready(function() {
 
       $('.about-us-item').removeClass('active')
 
-
-      //about us
-
-      $('.about-us-item-card').click(function(){
-        const windowWidth = $(window).width();
-
-        $('.about-us-item').removeClass('active');
-        const $this = $(this).parents();
-        $this.addClass('active');
-       
-        if (windowWidth < 992) {
-          const top = $this.offset().top;
-
-          $('body,html').animate({
-            scrollTop: top - 90
-          }, 0);
-        }
-        
-      })
     } else {
       if (slider.hasClass('slick-initialized')) {
         slider.slick('unslick');
       }
 
       $('.about-us-item:first-child').addClass('active');
-
-      $('.about-us-item').addClass("hidden_animation")
-      $('.about-us-row').viewportChecker({
-        offset: '0%',
-        removeClassAfterAnimation: true,
-        classToRemove: "hidden_animation",
-        callbackFunction: function(elem, action){
-    
-          for (let index = 1; index <= $('.about-us-item').length; index++) {
-            setTimeout(function(){
-              $(`.about-us-item:nth-child(${index})`).removeClass("hidden_animation").addClass('visible animated fadeIn');
-    
-              setTimeout(function(){
-                $(`.about-us-item:nth-child(${index})`).removeClass('visible animated fadeIn')
-              }, 1000)
-            }, (200*index))
-          }
-        }
-      });
-
-
-  //about us
-
-  $('.about-us-item-card').hover(function(){
-    const windowWidth = $(window).width();
-
-    $('.about-us-item').removeClass('active');
-    const $this = $(this).parents();
-    $this.addClass('active');
-    $this.parents('.about-us-row').css({
-      "padding-bottom": $this.find('.about-us-item-content').height() + 108
-    })
-
-    if (windowWidth < 992) {
-      const top = $this.offset().top;
-
-      $('body,html').animate({
-        scrollTop: top - 90
-      }, 0);
-    }
-    
-  })
     }
   }
 
   checkWindowSize();
   $(window).resize(checkWindowSize);
+  
 
   // modal
 
@@ -503,6 +443,67 @@ $( document ).ready(function() {
     $(this).addClass('active');
     $(`#${$(this).data('id')}`).addClass('active')
   })
+
+
+  //about us
+
+  if($(window).width() > 1200) {
+    $('.about-us-item').addClass("hidden_animation")
+      $('.about-us-row').viewportChecker({
+        offset: '0%',
+        removeClassAfterAnimation: true,
+        classToRemove: "hidden_animation",
+        callbackFunction: function(elem, action){
+    
+          for (let index = 1; index <= $('.about-us-item').length; index++) {
+            setTimeout(function(){
+              $(`.about-us-item:nth-child(${index})`).removeClass("hidden_animation").addClass('visible animated fadeIn');
+    
+              setTimeout(function(){
+                $(`.about-us-item:nth-child(${index})`).removeClass('visible animated fadeIn')
+              }, 1000)
+            }, (200*index))
+          }
+        }
+      });
+
+
+    $('.about-us-item-card').hover(function(){
+      const windowWidth = $(window).width();
+
+      $('.about-us-item').removeClass('active');
+      const $this = $(this).parents();
+      $this.addClass('active');
+      $this.parents('.about-us-row').css({
+        "padding-bottom": $this.find('.about-us-item-content').height() + 108
+      })
+
+      if (windowWidth < 992) {
+        const top = $this.offset().top;
+
+        $('body,html').animate({
+          scrollTop: top - 90
+        }, 0);
+      }
+    })
+  }else{
+    $('.about-us-item-card').click(function(){
+      const windowWidth = $(window).width();
+
+      $('.about-us-item').removeClass('active');
+      const $this = $(this).parents();
+      $this.addClass('active');
+     
+      if (windowWidth < 992) {
+        const top = $this.offset().top;
+
+        $('body,html').animate({
+          scrollTop: top - 90
+        }, 0);
+      }
+      
+    })
+  }
 
   
 }) 
