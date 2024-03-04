@@ -464,9 +464,13 @@
 
     .about-us-item-content {
       width: 100%;
-      position: static;
       padding: 32px 0;
       margin-top: 39px;
+      z-index: 1;
+      opacity: 1;
+      top: 0;
+      left: 0;
+      position: relative;
 
       p {
         max-width: 100%;
