@@ -469,7 +469,7 @@ $( document ).ready(function() {
 
 
     $('.about-us-item-card').hover(function(){
-      const windowWidth = $(window).width();
+      const windowWidthD = $(window).width();
 
       $('.about-us-item').removeClass('active');
       const $this = $(this).parents();
@@ -478,7 +478,7 @@ $( document ).ready(function() {
         "padding-bottom": $this.find('.about-us-item-content').height() + 108
       })
 
-      if (windowWidth < 992) {
+      if (windowWidthD < 992) {
         const top = $this.offset().top;
 
         $('body,html').animate({
@@ -488,13 +488,13 @@ $( document ).ready(function() {
     })
   }else{
     $('.about-us-item-card').click(function(){
-      const windowWidth = $(window).width();
+      const windowWidthM = $(window).width();
 
       $('.about-us-item').removeClass('active');
       const $this = $(this).parents();
       $this.addClass('active');
      
-      if (windowWidth < 992) {
+      if (windowWidthM < 992) {
         const top = $this.offset().top;
 
         $('body,html').animate({
