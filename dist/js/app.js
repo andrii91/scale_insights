@@ -386,14 +386,14 @@ $( document ).ready(function() {
         });
       }
 
-      $('.about-us-item').removeClass('active')
+      $('.about-us-item').removeClass('active-block')
 
     } else {
       if (slider.hasClass('slick-initialized')) {
         slider.slick('unslick');
       }
 
-      $('.about-us-item:first-child').addClass('active');
+      $('.about-us-item:first-child').addClass('active-block');
     }
   }
 
@@ -471,9 +471,9 @@ $( document ).ready(function() {
     $('.about-us-item-card').hover(function(){
       const windowWidthD = $(window).width();
 
-      $('.about-us-item').removeClass('active');
+      $('.about-us-item').removeClass('active-block');
       const $this = $(this).parents();
-      $this.addClass('active');
+      $this.addClass('active-block');
       $this.parents('.about-us-row').css({
         "padding-bottom": $this.find('.about-us-item-content').height() + 108
       })
@@ -490,9 +490,9 @@ $( document ).ready(function() {
     $('.about-us-item-card').click(function(){
       const windowWidthM = $(window).width();
 
-      $('.about-us-item').removeClass('active');
+      $('.about-us-item').removeClass('active-block');
       const $this = $(this).parents();
-      $this.addClass('active');
+      $this.addClass('active-block');
      
       if (windowWidthM < 992) {
         const top = $this.offset().top;
