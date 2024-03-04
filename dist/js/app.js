@@ -145,26 +145,6 @@ $( document ).ready(function() {
     }
   });
 
-  $('.about-us-item').addClass("hidden_animation")
-  $('.about-us-row').viewportChecker({
-    offset: '0%',
-    removeClassAfterAnimation: true,
-    classToRemove: "hidden_animation",
-    callbackFunction: function(elem, action){
-
-      for (let index = 1; index <= $('.about-us-item').length; index++) {
-        setTimeout(function(){
-          $(`.about-us-item:nth-child(${index})`).removeClass("hidden_animation").addClass('visible animated fadeIn');
-
-          setTimeout(function(){
-            $(`.about-us-item:nth-child(${index})`).removeClass('visible animated fadeIn')
-          }, 1000)
-        }, (200*index))
-      }
-    }
-  });
-
-
   $('.strategies-graph-text, .strategies-info-item').addClass("hidden_animation")
   $('.strategies-graph').viewportChecker({
     classToAdd: 'visible animated', 
@@ -412,16 +392,31 @@ $( document ).ready(function() {
         slider.slick('unslick');
       }
 
-      $('.about-us-item:first-child').addClass('active')
+      $('.about-us-item:first-child').addClass('active');
+
+      $('.about-us-item').addClass("hidden_animation")
+      $('.about-us-row').viewportChecker({
+        offset: '0%',
+        removeClassAfterAnimation: true,
+        classToRemove: "hidden_animation",
+        callbackFunction: function(elem, action){
+    
+          for (let index = 1; index <= $('.about-us-item').length; index++) {
+            setTimeout(function(){
+              $(`.about-us-item:nth-child(${index})`).removeClass("hidden_animation").addClass('visible animated fadeIn');
+    
+              setTimeout(function(){
+                $(`.about-us-item:nth-child(${index})`).removeClass('visible animated fadeIn')
+              }, 1000)
+            }, (200*index))
+          }
+        }
+      });
     }
   }
 
-  // Викликаємо функцію при завантаженні сторінки та при ресайзі вікна
   checkWindowSize();
   $(window).resize(checkWindowSize);
-
-
-
 
   // modal
 
