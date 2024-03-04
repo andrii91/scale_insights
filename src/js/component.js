@@ -145,6 +145,26 @@ $( document ).ready(function() {
     }
   });
 
+  $('.about-us-item').addClass("hidden_animation")
+  $('.about-us-row').viewportChecker({
+    offset: '0%',
+    removeClassAfterAnimation: true,
+    classToRemove: "hidden_animation",
+    callbackFunction: function(elem, action){
+
+      for (let index = 1; index <= $('.about-us-item').length; index++) {
+        setTimeout(function(){
+          $(`.about-us-item:nth-child(${index})`).removeClass("hidden_animation").addClass('visible animated fadeIn');
+
+          setTimeout(function(){
+            $(`.about-us-item:nth-child(${index})`).removeClass('visible animated fadeIn')
+          }, 1000)
+        }, (200*index))
+      }
+    }
+  });
+
+
   $('.strategies-graph-text, .strategies-info-item').addClass("hidden_animation")
   $('.strategies-graph').viewportChecker({
     classToAdd: 'visible animated', 
@@ -385,21 +405,23 @@ $( document ).ready(function() {
           nextArrow:`<div class='transparent-next'></div>`,
         });
       }
-
-      $('.about-us-item').removeClass('active-block')
-
+      
     } else {
       if (slider.hasClass('slick-initialized')) {
         slider.slick('unslick');
       }
-
-      $('.about-us-item:first-child').addClass('active-block');
     }
   }
 
+  // Викликаємо функцію при завантаженні сторінки та при ресайзі вікна
   checkWindowSize();
   $(window).resize(checkWindowSize);
-  
+
+  if ($(window).width() < 992) {
+    $('.about-us-item').removeClass('active')
+  }else{
+    $('.about-us-item:first-child').addClass('active')
+  }
 
   // modal
 
@@ -433,6 +455,28 @@ $( document ).ready(function() {
   })
   // end modal
 
+  //about us
+
+  $('.about-us-item-card').hover(function(){
+    const windowWidth = $(window).width();
+
+    $('.about-us-item').removeClass('active');
+    const $this = $(this).parents();
+    $this.addClass('active');
+    $this.parents('.about-us-row').css({
+      "padding-bottom": $this.find('.about-us-item-content').height() + 108
+    })
+
+    if (windowWidth < 992) {
+      const top = $this.offset().top;
+
+      $('body,html').animate({
+        scrollTop: top - 90
+      }, 0);
+    }
+    
+  })
+
 
   //
 
@@ -443,67 +487,6 @@ $( document ).ready(function() {
     $(this).addClass('active');
     $(`#${$(this).data('id')}`).addClass('active')
   })
-
-
-  //about us
-
-  if($(window).width() > 1200) {
-    $('.about-us-item').addClass("hidden_animation")
-      $('.about-us-row').viewportChecker({
-        offset: '0%',
-        removeClassAfterAnimation: true,
-        classToRemove: "hidden_animation",
-        callbackFunction: function(elem, action){
-    
-          for (let index = 1; index <= $('.about-us-item').length; index++) {
-            setTimeout(function(){
-              $(`.about-us-item:nth-child(${index})`).removeClass("hidden_animation").addClass('visible animated fadeIn');
-    
-              setTimeout(function(){
-                $(`.about-us-item:nth-child(${index})`).removeClass('visible animated fadeIn')
-              }, 1000)
-            }, (200*index))
-          }
-        }
-      });
-
-
-    $('.about-us-item-card').hover(function(){
-      const windowWidthD = $(window).width();
-
-      $('.about-us-item').removeClass('active-block');
-      const $this = $(this).parents();
-      $this.addClass('active-block');
-      $this.parents('.about-us-row').css({
-        "padding-bottom": $this.find('.about-us-item-content').height() + 108
-      })
-
-      if (windowWidthD < 992) {
-        const top = $this.offset().top;
-
-        $('body,html').animate({
-          scrollTop: top - 90
-        }, 0);
-      }
-    })
-  }else{
-    $('.about-us-item-card').click(function(){
-      const windowWidthM = $(window).width();
-
-      $('.about-us-item').removeClass('active-block');
-      const $this = $(this).parents();
-      $this.addClass('active-block');
-     
-      if (windowWidthM < 992) {
-        const top = $this.offset().top;
-
-        $('body,html').animate({
-          scrollTop: top - 90
-        }, 0);
-      }
-      
-    })
-  }
 
   
 }) 
