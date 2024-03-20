@@ -413,7 +413,6 @@ $( document ).ready(function() {
     }
   }
 
-  // Викликаємо функцію при завантаженні сторінки та при ресайзі вікна
   checkWindowSize();
   $(window).resize(checkWindowSize);
 

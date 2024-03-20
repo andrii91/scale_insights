@@ -2257,6 +2257,16 @@ h5 {
   }
 }
 
+.max-w-tabs-item {
+  &-700 {
+    max-width: 700px;
+  }
+
+  &-630 {
+    max-width: 630px;
+  }
+}
+
 body {
   overflow-x: hidden;
   color: var(--textColor);
